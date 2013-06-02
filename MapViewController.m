@@ -113,9 +113,6 @@ didChangeDragState:(MKAnnotationViewDragState)newState
 {
     if (newState == MKAnnotationViewDragStateEnding)
     {
-        CLLocationCoordinate2D droppedAt = annotationView.annotation.coordinate;
-        NSLog(@"Pin dropped at %f,%f", droppedAt.latitude, droppedAt.longitude);
-        
         RezzoAnnotation* annotation = annotationView.annotation;
         annotation.info.location = annotationView.annotation.coordinate;
     }

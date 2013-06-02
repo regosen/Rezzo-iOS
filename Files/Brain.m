@@ -88,7 +88,7 @@ static Brain *sInstance;
         
         //add body
         NSMutableData *postBody = [NSMutableData data];
-        NSLog(@"body made");
+        //NSLog(@"body made");
         
         int index=0;
         for (PhotoInfo* photo in sInstance.photos)
@@ -100,6 +100,7 @@ static Brain *sInstance;
             [postBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
             
             /*
+             // TODO: upload image
             //image
             [postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
             [postBody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"rezzo_item_image_%d\"; filename=\"image%d.jpg\"\r\n", index, index] dataUsingEncoding:NSUTF8StringEncoding]];
@@ -112,7 +113,7 @@ static Brain *sInstance;
             [postBody appendData:imgData];
             [postBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
              */
-            NSLog(@"entry added");
+            //NSLog(@"entry added");
             
             index++;
         }
@@ -122,14 +123,14 @@ static Brain *sInstance;
         // add body to post
         [uploadRequest setHTTPBody:postBody];
         
-        NSLog(@"body set");
+        //NSLog(@"body set");
         // pointers to some necessary objects
         NSHTTPURLResponse* response =[[NSHTTPURLResponse alloc] init];
         NSError* error = nil;
         
         // synchronous filling of data from HTTP POST response
         NSData *responseData = [NSURLConnection sendSynchronousRequest:uploadRequest returningResponse:&response error:&error];
-        NSLog(@"just sent request");
+        //NSLog(@"just sent request");
         
         if (error) {
             [delegate doneUploading:NO errorMessage:error.localizedDescription];
@@ -139,9 +140,9 @@ static Brain *sInstance;
         NSString *responseString = [[NSString alloc] initWithBytes:[responseData bytes]
                                                              length:[responseData length]
                                                            encoding:NSUTF8StringEncoding];
-        NSLog(@"done");
+        //NSLog(@"done");
         // see if we get a welcome result
-        NSLog(@"%@", responseString);
+        //NSLog(@"%@", responseString);
                 
         // success, clear local photo list
         sInstance.photos = [[NSArray alloc] init];

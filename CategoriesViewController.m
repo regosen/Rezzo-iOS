@@ -143,7 +143,6 @@
     NSString* category = [self textForIndexPath:indexPath];
     NSArray* oldList = [self selectedCategoriesForIndexPath:indexPath];
     NSMutableArray* newList = nil;
-    
 
     if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark)
     {
