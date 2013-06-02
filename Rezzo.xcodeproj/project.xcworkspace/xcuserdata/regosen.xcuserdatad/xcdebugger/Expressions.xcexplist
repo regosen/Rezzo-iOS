@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "+[Brain photoAccessed:]:Brain.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[TagSearchTableViewController tableView:cellForRowAtIndexPath:]:TagSearchTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tag.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Brain initDatabaseWithSender:]:Brain.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.database.documentState">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RezzoAnnotation title]:RezzoAnnotation.m">
+      </ContextState>
+      <ContextState
+         contextName = "__76-[OutboxViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke:OutboxViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(__bridge NSDictionary*)imagePropertiesDictionary">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PictureViewController viewWillAppear:]:PictureViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageId">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MapViewController updateRegion]:MapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mapView.region">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PictureViewController resetImage]:PictureViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageView.frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.imageURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[Photo(FlickrData) photoWithFlickrInfo:inManagedObjectContext:]:Photo+FlickrData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "photo.image_url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DescriptionViewController updateView]:DescriptionViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "photo.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PictureViewController visitPressed:]:PictureViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.parentViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[Brain initialize]:Brain.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "sInstance.naturalResources">
+            </PersistentString>
+            <PersistentString
+               value = "sInstance.userDefs">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DescriptionViewController keyboardDidHide:]:DescriptionViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "photo.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MapViewController viewWillAppear:]:MapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mapView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController tableView:cellForRowAtIndexPath:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.detailTextLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[Tag(CoreData) tagWithName:fromPhoto:inManagedObjectContext:]:Tag+CoreData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[tag.photos count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PictureListControllerForCoreData prepareForSegue:sender:]:PictureListControllerForCoreData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RezzoAnnotation coordinate]:RezzoAnnotation.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.info">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TagSearchTableViewController prepareForSegue:sender:]:TagSearchTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.tag.photos count]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PictureListControllerForCoreData tableView:numberOfRowsInSection:]:PictureListControllerForCoreData.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

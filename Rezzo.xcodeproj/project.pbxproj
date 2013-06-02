@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E41EA8EA175ABAB300485FBA /* PhotoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E41EA8E9175ABAB300485FBA /* PhotoInfo.m */; };
+		E41EA8EC175ABC1600485FBA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41EA8EB175ABC1600485FBA /* CoreLocation.framework */; };
+		E41EA8EE175ABE6900485FBA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41EA8ED175ABE6900485FBA /* MapKit.framework */; };
+		E41EA8F0175AC43200485FBA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41EA8EF175AC43200485FBA /* MobileCoreServices.framework */; };
+		E41EA8FF175ACB9800485FBA /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41EA8FE175ACB9800485FBA /* ImageIO.framework */; };
+		E41EA901175ACBFB00485FBA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41EA900175ACBFB00485FBA /* AssetsLibrary.framework */; };
+		E41EA904175AD4DD00485FBA /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41EA903175AD4DD00485FBA /* DescriptionViewController.m */; };
+		E41EA907175AD72C00485FBA /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41EA906175AD72C00485FBA /* CategoriesViewController.m */; };
+		E41EA90D175AE32600485FBA /* RezzoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41EA90A175AE32500485FBA /* RezzoAnnotation.m */; };
+		E41EA90E175AE32600485FBA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41EA90C175AE32600485FBA /* MapViewController.m */; };
+		E41EA916175B10B900485FBA /* rezzo-57.png in Resources */ = {isa = PBXBuildFile; fileRef = E41EA915175B10B900485FBA /* rezzo-57.png */; };
+		E41EA918175B10BE00485FBA /* rezzo-114.png in Resources */ = {isa = PBXBuildFile; fileRef = E41EA917175B10BE00485FBA /* rezzo-114.png */; };
+		E4D1D02F17597BE2007D9F93 /* Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D01117597BE2007D9F93 /* Brain.m */; };
+		E4D1D03117597BE2007D9F93 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01417597BE2007D9F93 /* Default-568h@2x.png */; };
+		E4D1D03217597BE2007D9F93 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01517597BE2007D9F93 /* Default.png */; };
+		E4D1D03317597BE2007D9F93 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01617597BE2007D9F93 /* Default@2x.png */; };
+		E4D1D03417597BE2007D9F93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01817597BE2007D9F93 /* InfoPlist.strings */; };
+		E4D1D03517597BE2007D9F93 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01A17597BE2007D9F93 /* MainStoryboard_iPad.storyboard */; };
+		E4D1D03617597BE2007D9F93 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01C17597BE2007D9F93 /* MainStoryboard_iPhone.storyboard */; };
+		E4D1D03717597BE2007D9F93 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D01F17597BE2007D9F93 /* MainViewController.m */; };
+		E4D1D03817597BE2007D9F93 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D02017597BE2007D9F93 /* first.png */; };
+		E4D1D03917597BE2007D9F93 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D02117597BE2007D9F93 /* first@2x.png */; };
+		E4D1D03A17597BE2007D9F93 /* RezzoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */; };
+		E4D1D03C17597BE2007D9F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D02617597BE2007D9F93 /* main.m */; };
+		E4D1D03D17597BE2007D9F93 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D02817597BE2007D9F93 /* PhotoViewController.m */; };
+		E4D1D04017597BE2007D9F93 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D02D17597BE2007D9F93 /* second.png */; };
+		E4D1D04117597BE2007D9F93 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D02E17597BE2007D9F93 /* second@2x.png */; };
+		E4F0FEAB1745859100CD3650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F0FEAA1745859100CD3650 /* UIKit.framework */; };
+		E4F0FEAD1745859100CD3650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F0FEAC1745859100CD3650 /* Foundation.framework */; };
+		E4F0FEAF1745859100CD3650 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F0FEAE1745859100CD3650 /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E41EA8E8175ABAB300485FBA /* PhotoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoInfo.h; sourceTree = SOURCE_ROOT; };
+		E41EA8E9175ABAB300485FBA /* PhotoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoInfo.m; sourceTree = SOURCE_ROOT; };
+		E41EA8EB175ABC1600485FBA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E41EA8ED175ABE6900485FBA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E41EA8EF175AC43200485FBA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E41EA8FE175ACB9800485FBA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		E41EA900175ACBFB00485FBA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		E41EA902175AD4DC00485FBA /* DescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionViewController.h; sourceTree = SOURCE_ROOT; };
+		E41EA903175AD4DD00485FBA /* DescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = SOURCE_ROOT; };
+		E41EA905175AD72C00485FBA /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = SOURCE_ROOT; };
+		E41EA906175AD72C00485FBA /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = SOURCE_ROOT; };
+		E41EA909175AE32500485FBA /* RezzoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RezzoAnnotation.h; sourceTree = SOURCE_ROOT; };
+		E41EA90A175AE32500485FBA /* RezzoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RezzoAnnotation.m; sourceTree = SOURCE_ROOT; };
+		E41EA90B175AE32500485FBA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = SOURCE_ROOT; };
+		E41EA90C175AE32600485FBA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = SOURCE_ROOT; };
+		E41EA915175B10B900485FBA /* rezzo-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-57.png"; sourceTree = "<group>"; };
+		E41EA917175B10BE00485FBA /* rezzo-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-114.png"; sourceTree = "<group>"; };
+		E4D1D01017597BE2007D9F93 /* Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Brain.h; path = Files/Brain.h; sourceTree = SOURCE_ROOT; };
+		E4D1D01117597BE2007D9F93 /* Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Brain.m; path = Files/Brain.m; sourceTree = SOURCE_ROOT; };
+		E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Rezzo-Info.plist"; path = "Files/Rezzo-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E4D1D01317597BE2007D9F93 /* Rezzo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Rezzo-Prefix.pch"; path = "Users/regosen/Documents/Projects/Rezzo/Files/Rezzo-Prefix.pch"; sourceTree = SDKROOT; };
+		E4D1D01417597BE2007D9F93 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Files/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		E4D1D01517597BE2007D9F93 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Files/Default.png; sourceTree = SOURCE_ROOT; };
+		E4D1D01617597BE2007D9F93 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Files/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		E4D1D01917597BE2007D9F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		E4D1D01B17597BE2007D9F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		E4D1D01D17597BE2007D9F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		E4D1D01E17597BE2007D9F93 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Files/MainViewController.h; sourceTree = SOURCE_ROOT; };
+		E4D1D01F17597BE2007D9F93 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Files/MainViewController.m; sourceTree = SOURCE_ROOT; };
+		E4D1D02017597BE2007D9F93 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = Files/first.png; sourceTree = SOURCE_ROOT; };
+		E4D1D02117597BE2007D9F93 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "Files/first@2x.png"; sourceTree = SOURCE_ROOT; };
+		E4D1D02217597BE2007D9F93 /* RezzoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RezzoAppDelegate.h; path = Files/RezzoAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RezzoAppDelegate.m; path = Files/RezzoAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		E4D1D02617597BE2007D9F93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Files/main.m; sourceTree = SOURCE_ROOT; };
+		E4D1D02717597BE2007D9F93 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = Files/PhotoViewController.h; sourceTree = SOURCE_ROOT; };
+		E4D1D02817597BE2007D9F93 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = Files/PhotoViewController.m; sourceTree = SOURCE_ROOT; };
+		E4D1D02D17597BE2007D9F93 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = Files/second.png; sourceTree = SOURCE_ROOT; };
+		E4D1D02E17597BE2007D9F93 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "Files/second@2x.png"; sourceTree = SOURCE_ROOT; };
+		E4F0FEA71745859100CD3650 /* Rezzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rezzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4F0FEAA1745859100CD3650 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E4F0FEAC1745859100CD3650 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E4F0FEAE1745859100CD3650 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4F0FEA41745859100CD3650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E41EA901175ACBFB00485FBA /* AssetsLibrary.framework in Frameworks */,
+				E41EA8FF175ACB9800485FBA /* ImageIO.framework in Frameworks */,
+				E41EA8F0175AC43200485FBA /* MobileCoreServices.framework in Frameworks */,
+				E41EA8EE175ABE6900485FBA /* MapKit.framework in Frameworks */,
+				E41EA8EC175ABC1600485FBA /* CoreLocation.framework in Frameworks */,
+				E4F0FEAB1745859100CD3650 /* UIKit.framework in Frameworks */,
+				E4F0FEAD1745859100CD3650 /* Foundation.framework in Frameworks */,
+				E4F0FEAF1745859100CD3650 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4D1D01717597BE2007D9F93 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				E4D1D01817597BE2007D9F93 /* InfoPlist.strings */,
+				E4D1D01A17597BE2007D9F93 /* MainStoryboard_iPad.storyboard */,
+				E4D1D01C17597BE2007D9F93 /* MainStoryboard_iPhone.storyboard */,
+			);
+			name = en.lproj;
+			path = Files/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4F0FE9E1745859100CD3650 = {
+			isa = PBXGroup;
+			children = (
+				E41EA917175B10BE00485FBA /* rezzo-114.png */,
+				E41EA915175B10B900485FBA /* rezzo-57.png */,
+				E4F0FEB01745859100CD3650 /* Files */,
+				E4F0FEA91745859100CD3650 /* Frameworks */,
+				E4F0FEA81745859100CD3650 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4F0FEA81745859100CD3650 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4F0FEA71745859100CD3650 /* Rezzo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4F0FEA91745859100CD3650 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E41EA900175ACBFB00485FBA /* AssetsLibrary.framework */,
+				E41EA8FE175ACB9800485FBA /* ImageIO.framework */,
+				E41EA8EF175AC43200485FBA /* MobileCoreServices.framework */,
+				E41EA8ED175ABE6900485FBA /* MapKit.framework */,
+				E41EA8EB175ABC1600485FBA /* CoreLocation.framework */,
+				E4F0FEAA1745859100CD3650 /* UIKit.framework */,
+				E4F0FEAC1745859100CD3650 /* Foundation.framework */,
+				E4F0FEAE1745859100CD3650 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4F0FEB01745859100CD3650 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				E41EA909175AE32500485FBA /* RezzoAnnotation.h */,
+				E41EA90A175AE32500485FBA /* RezzoAnnotation.m */,
+				E41EA90B175AE32500485FBA /* MapViewController.h */,
+				E41EA90C175AE32600485FBA /* MapViewController.m */,
+				E41EA905175AD72C00485FBA /* CategoriesViewController.h */,
+				E41EA906175AD72C00485FBA /* CategoriesViewController.m */,
+				E41EA902175AD4DC00485FBA /* DescriptionViewController.h */,
+				E41EA903175AD4DD00485FBA /* DescriptionViewController.m */,
+				E41EA8E8175ABAB300485FBA /* PhotoInfo.h */,
+				E41EA8E9175ABAB300485FBA /* PhotoInfo.m */,
+				E4D1D01017597BE2007D9F93 /* Brain.h */,
+				E4D1D01117597BE2007D9F93 /* Brain.m */,
+				E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */,
+				E4D1D01317597BE2007D9F93 /* Rezzo-Prefix.pch */,
+				E4D1D01417597BE2007D9F93 /* Default-568h@2x.png */,
+				E4D1D01517597BE2007D9F93 /* Default.png */,
+				E4D1D01617597BE2007D9F93 /* Default@2x.png */,
+				E4D1D01717597BE2007D9F93 /* en.lproj */,
+				E4D1D01E17597BE2007D9F93 /* MainViewController.h */,
+				E4D1D01F17597BE2007D9F93 /* MainViewController.m */,
+				E4D1D02017597BE2007D9F93 /* first.png */,
+				E4D1D02117597BE2007D9F93 /* first@2x.png */,
+				E4D1D02217597BE2007D9F93 /* RezzoAppDelegate.h */,
+				E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */,
+				E4D1D02617597BE2007D9F93 /* main.m */,
+				E4D1D02717597BE2007D9F93 /* PhotoViewController.h */,
+				E4D1D02817597BE2007D9F93 /* PhotoViewController.m */,
+				E4D1D02D17597BE2007D9F93 /* second.png */,
+				E4D1D02E17597BE2007D9F93 /* second@2x.png */,
+			);
+			name = Files;
+			path = FlickrFetcher;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4F0FEA61745859100CD3650 /* Rezzo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4F0FED81745859100CD3650 /* Build configuration list for PBXNativeTarget "Rezzo" */;
+			buildPhases = (
+				E4F0FEA31745859100CD3650 /* Sources */,
+				E4F0FEA41745859100CD3650 /* Frameworks */,
+				E4F0FEA51745859100CD3650 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rezzo;
+			productName = FlickrFetcher;
+			productReference = E4F0FEA71745859100CD3650 /* Rezzo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4F0FE9F1745859100CD3650 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FlickrFetcher;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Regaip Sen";
+			};
+			buildConfigurationList = E4F0FEA21745859100CD3650 /* Build configuration list for PBXProject "Rezzo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E4F0FE9E1745859100CD3650;
+			productRefGroup = E4F0FEA81745859100CD3650 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4F0FEA61745859100CD3650 /* Rezzo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E4F0FEA51745859100CD3650 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4D1D03117597BE2007D9F93 /* Default-568h@2x.png in Resources */,
+				E4D1D03217597BE2007D9F93 /* Default.png in Resources */,
+				E4D1D03317597BE2007D9F93 /* Default@2x.png in Resources */,
+				E4D1D03417597BE2007D9F93 /* InfoPlist.strings in Resources */,
+				E4D1D03517597BE2007D9F93 /* MainStoryboard_iPad.storyboard in Resources */,
+				E4D1D03617597BE2007D9F93 /* MainStoryboard_iPhone.storyboard in Resources */,
+				E4D1D03817597BE2007D9F93 /* first.png in Resources */,
+				E4D1D03917597BE2007D9F93 /* first@2x.png in Resources */,
+				E4D1D04017597BE2007D9F93 /* second.png in Resources */,
+				E4D1D04117597BE2007D9F93 /* second@2x.png in Resources */,
+				E41EA916175B10B900485FBA /* rezzo-57.png in Resources */,
+				E41EA918175B10BE00485FBA /* rezzo-114.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4F0FEA31745859100CD3650 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4D1D02F17597BE2007D9F93 /* Brain.m in Sources */,
+				E4D1D03717597BE2007D9F93 /* MainViewController.m in Sources */,
+				E4D1D03A17597BE2007D9F93 /* RezzoAppDelegate.m in Sources */,
+				E4D1D03C17597BE2007D9F93 /* main.m in Sources */,
+				E4D1D03D17597BE2007D9F93 /* PhotoViewController.m in Sources */,
+				E41EA8EA175ABAB300485FBA /* PhotoInfo.m in Sources */,
+				E41EA904175AD4DD00485FBA /* DescriptionViewController.m in Sources */,
+				E41EA907175AD72C00485FBA /* CategoriesViewController.m in Sources */,
+				E41EA90D175AE32600485FBA /* RezzoAnnotation.m in Sources */,
+				E41EA90E175AE32600485FBA /* MapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E4D1D01817597BE2007D9F93 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4D1D01917597BE2007D9F93 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E4D1D01A17597BE2007D9F93 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4D1D01B17597BE2007D9F93 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		E4D1D01C17597BE2007D9F93 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4D1D01D17597BE2007D9F93 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E4F0FED61745859100CD3650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E4F0FED71745859100CD3650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4F0FED91745859100CD3650 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Files/Rezzo-Prefix.pch";
+				INFOPLIST_FILE = "Files/Rezzo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = Rezzo;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4F0FEDA1745859100CD3650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Files/Rezzo-Prefix.pch";
+				INFOPLIST_FILE = "Files/Rezzo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				PRODUCT_NAME = Rezzo;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4F0FEA21745859100CD3650 /* Build configuration list for PBXProject "Rezzo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F0FED61745859100CD3650 /* Debug */,
+				E4F0FED71745859100CD3650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4F0FED81745859100CD3650 /* Build configuration list for PBXNativeTarget "Rezzo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F0FED91745859100CD3650 /* Debug */,
+				E4F0FEDA1745859100CD3650 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4F0FE9F1745859100CD3650 /* Project object */;
+}
