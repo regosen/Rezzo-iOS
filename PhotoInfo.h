@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "Brain.h"
 
 @interface PhotoInfo : NSObject
 
@@ -17,9 +18,11 @@
 @property (nonatomic) CLLocationCoordinate2D location;
 @property (nonatomic, strong) UIImage* image;
 
-@property (nonatomic, strong) NSArray* naturalResources;
-@property (nonatomic, strong) NSArray* infrastructureResources;
-@property (nonatomic, strong) NSArray* skilledResources;
+@property (nonatomic, strong) NSMutableDictionary* resources;
+
+#if USING_CUSTOM_CATEGORIES
+@property (nonatomic, strong) NSMutableDictionary* customResources;
+#endif
 
 - (NSString *) categoryString;
 - (NSString *) jsonString;

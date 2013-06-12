@@ -8,6 +8,7 @@
 
 #import "DescriptionViewController.h"
 #import "Brain.h"
+#import "PhotoInfo.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation DescriptionViewController
@@ -34,7 +35,6 @@
     PhotoInfo* photo = [[Brain get] selectedPhoto];
     self.titleField.text = photo.title;
     self.notesField.text = photo.notes;
-    
 }
 
 - (void) keyboardDidHide:(id)sender

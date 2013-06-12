@@ -10,4 +10,8 @@
 
 @interface CategoriesViewController : UITableViewController
 
+- (void) setActiveCustomCell:(UITableViewCell*)cell;
+
+@property (nonatomic, strong) NSString* currentCustomText;
+
 @end

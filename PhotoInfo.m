@@ -10,13 +10,15 @@
 
 @implementation PhotoInfo
 
-
 - (id)init {
     self = [super init];
     if (self) {
-        self.naturalResources = [[NSArray alloc] init];
-        self.infrastructureResources = [[NSArray alloc] init];
-        self.skilledResources = [[NSArray alloc] init];
+        self.title = [[NSString alloc] init];
+        self.notes = [[NSString alloc] init];
+        self.resources = [[NSMutableDictionary alloc] init];
+#if USING_CUSTOM_CATEGORIES
+        self.customResources = [[NSMutableDictionary alloc] init];
+#endif
     }
     return self;
 }
@@ -25,18 +27,17 @@
 {
     NSMutableArray* descArray = [[NSMutableArray alloc] init];
     
-    if (self.naturalResources.count > 0)
+    for (NSArray* categories in self.resources.allValues)
     {
-        [descArray addObject:[self.naturalResources componentsJoinedByString:@", "]];
+        [descArray addObject:[categories componentsJoinedByString:@", "]];
     }
-    if (self.infrastructureResources.count > 0)
+    
+#if USING_CUSTOM_CATEGORIES
+    for (NSArray* categories in self.customResources.allValues)
     {
-        [descArray addObject:[self.infrastructureResources componentsJoinedByString:@", "]];
+        [descArray addObject:[categories componentsJoinedByString:@", "]];
     }
-    if (self.skilledResources.count > 0)
-    {
-        [descArray addObject:[self.skilledResources componentsJoinedByString:@", "]];
-    }
+#endif
     
     return (descArray.count == 0) ? @"(no categories)" : [descArray componentsJoinedByString:@", "];
 }
@@ -46,9 +47,10 @@
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     [dict setObject:self.title forKey:@"title"];
     [dict setObject:self.notes forKey:@"notes"];
-    [dict setObject:self.naturalResources forKey:@"naturalResources"];
-    [dict setObject:self.infrastructureResources forKey:@"infrastructureResources"];
-    [dict setObject:self.skilledResources forKey:@"skilledResources"];
+    [dict setObject:self.resources forKey:@"resources"];
+#if USING_CUSTOM_CATEGORIES
+    [dict setObject:self.customResources forKey:@"customResources"];
+#endif
     [dict setObject:[NSNumber numberWithDouble:self.location.latitude] forKey:@"latitude"];
     [dict setObject:[NSNumber numberWithDouble:self.location.longitude] forKey:@"longitude"];
     

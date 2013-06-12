@@ -9,7 +9,9 @@
 #ifndef Rezzo_Brain_h
 #define Rezzo_Brain_h
 
-#import "PhotoInfo.h"
+#define USING_CUSTOM_CATEGORIES 1
+
+@class PhotoInfo;
 
 @protocol UploadControllerDelegate <NSObject>
 
@@ -19,7 +21,9 @@
 
 @interface Brain : NSObject
 
+
 + (Brain*)get;
++ (NSDictionary*) getResources:(BOOL)all;
 
 + (void) selectPhoto:(PhotoInfo*)photo;
 + (void) addAndSelectPhoto:(PhotoInfo*)photo;
@@ -29,10 +33,6 @@
 
 @property (nonatomic, strong) NSArray* photos;
 @property (nonatomic, strong) PhotoInfo* selectedPhoto;
-
-@property (nonatomic, strong) NSArray* naturalResources;
-@property (nonatomic, strong) NSArray* infrastructureResources;
-@property (nonatomic, strong) NSArray* skilledResources;
 
 @end
 

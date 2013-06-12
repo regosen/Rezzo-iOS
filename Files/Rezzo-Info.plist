@@ -33,43 +33,46 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>Infrastructure Resources</key>
-	<array>
-		<string>School</string>
-		<string>Hospital</string>
-		<string>Health Center</string>
-		<string>Police Station</string>
-		<string>Computer Lab</string>
-		<string>Seed Bank</string>
-		<string>Transportation Hub</string>
-		<string>Garden</string>
-		<string>Corner Store</string>
-		<string>Church</string>
-		<string>Mosque</string>
-	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>Natural Resources</key>
-	<array>
-		<string>Water Supply</string>
-		<string>Plantation</string>
-		<string>Hydropower</string>
-		<string>Solar Power</string>
-		<string>Sand</string>
-		<string>Clay</string>
-		<string>Fish</string>
-	</array>
-	<key>Skilled Resources</key>
-	<array>
-		<string>Doctor</string>
-		<string>Nurse</string>
-		<string>Carpenter</string>
-		<string>Metal Worker</string>
-		<string>Farmer</string>
-		<string>Teacher</string>
-		<string>NGO Office</string>
-		<string>Well Digger</string>
-	</array>
+	<key>Resources</key>
+	<dict>
+		<key>Infrastructure Resources</key>
+		<array>
+			<string>School</string>
+			<string>Hospital</string>
+			<string>Health Center</string>
+			<string>Police Station</string>
+			<string>Computer Lab</string>
+			<string>Seed Bank</string>
+			<string>Transportation Hub</string>
+			<string>Garden</string>
+			<string>Corner Store</string>
+			<string>Church</string>
+			<string>Mosque</string>
+		</array>
+		<key>Natural Resources</key>
+		<array>
+			<string>Water Supply</string>
+			<string>Plantation</string>
+			<string>Hydropower</string>
+			<string>Solar Power</string>
+			<string>Sand</string>
+			<string>Clay</string>
+			<string>Fish</string>
+		</array>
+		<key>Skilled Resources</key>
+		<array>
+			<string>Doctor</string>
+			<string>Nurse</string>
+			<string>Carpenter</string>
+			<string>Metal Worker</string>
+			<string>Farmer</string>
+			<string>Teacher</string>
+			<string>NGO Office</string>
+			<string>Well Digger</string>
+		</array>
+	</dict>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
@@ -91,8 +94,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

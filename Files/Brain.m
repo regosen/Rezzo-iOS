@@ -7,10 +7,13 @@
 //
 
 #import "Brain.h"
+#import "PhotoInfo.h"
 
 @interface Brain() <NSURLConnectionDelegate>
 
 @property (nonatomic, weak) id<UploadControllerDelegate> delegate;
+@property (nonatomic, strong) NSDictionary* resources;
+@property (nonatomic, strong) NSUserDefaults* userDefs;
 
 @end
 
@@ -20,6 +23,7 @@
 static Brain *sInstance;
 
 #define SERVER_URL @"http://47yf.localtunnel.com"
+#define CACHE_KEY  @"resources"
 
 + (void)initialize
 {
@@ -29,20 +33,37 @@ static Brain *sInstance;
         initialized = YES;
         sInstance = [[Brain alloc] init];
         sInstance.photos = [[NSArray alloc] init];
+        sInstance.userDefs = [NSUserDefaults standardUserDefaults];
         
-        NSBundle *bundle = [NSBundle mainBundle];
-        NSString *pListPath = [bundle pathForResource:@"Rezzo-Info" ofType:@"plist"];
-        NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:pListPath];
+        // 1. get resource list from cache (if exists)
+        NSDictionary* resources = [sInstance.userDefs objectForKey:CACHE_KEY];
+        if (resources)
+        {
+            sInstance.resources = resources;
+        }
+        else
+        {
+            // 2. otherwise, get static list that was bundled with app
+            NSBundle *bundle = [NSBundle mainBundle];
+            NSString *pListPath = [bundle pathForResource:@"Info" ofType:@"plist"];
+            NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:pListPath];
+            sInstance.resources = [dictionary objectForKey:@"Resources"];
+            [sInstance.userDefs setObject:sInstance.resources forKey:CACHE_KEY];
+            [sInstance.userDefs synchronize];
+        }
         
-        sInstance.naturalResources = [dictionary objectForKey:@"Natural Resources"];
-        sInstance.infrastructureResources = [dictionary objectForKey:@"Infrastructure Resources"];
-        sInstance.skilledResources = [dictionary objectForKey:@"Skilled Resources"];
+        // 3. (TODO): query latest list from server (asychronously) to update list and cache
     }
 }
 
 + (Brain*)get
 {
     return sInstance;
+}
+
++ (NSDictionary*) getResources:(BOOL)all
+{
+    return (all) ? sInstance.resources : sInstance.selectedPhoto.resources;
 }
 
 + (void) selectPhoto:(PhotoInfo*)photo
@@ -69,10 +90,17 @@ static Brain *sInstance;
     dispatch_queue_t downloadQueue = dispatch_queue_create("flickr downloader", NULL);
     dispatch_async(downloadQueue, ^{
         
+#if 0 // for printing instead of uploading data
+        for (PhotoInfo* photo in sInstance.photos)
+        {
+            NSLog(@"%@", [photo jsonString]);
+        }
+        return;
+#endif
+        
+        
         // following block posted by robhasacamera on stackoverflow: HTTP post of UIImage and params to webserver
-        NSMutableURLRequest *uploadRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL]
-                                                                   cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                               timeoutInterval:30.0];
+        NSMutableURLRequest *uploadRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
         
         [uploadRequest setHTTPMethod:@"POST"];
         
@@ -142,8 +170,10 @@ static Brain *sInstance;
                                                            encoding:NSUTF8StringEncoding];
         //NSLog(@"done");
         // see if we get a welcome result
-        //NSLog(@"%@", responseString);
-                
+#if DEBUG
+        NSLog(@"%@", responseString);
+#endif
+        
         // success, clear local photo list
         sInstance.photos = [[NSArray alloc] init];
         [sInstance.delegate doneUploading:YES errorMessage:nil];

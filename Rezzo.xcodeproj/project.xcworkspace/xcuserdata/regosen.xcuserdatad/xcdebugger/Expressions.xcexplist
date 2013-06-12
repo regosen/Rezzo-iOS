@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[CategoriesViewController textForIndexPath:]:CategoriesViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "+[Brain photoAccessed:]:Brain.m">
       </ContextState>
       <ContextState
@@ -10,6 +18,14 @@
          <PersistentStrings>
             <PersistentString
                value = "tag.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CategoriesViewController tableView:cellForRowAtIndexPath:]:CategoriesViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.activeCustomTextField">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -23,6 +39,11 @@
       </ContextState>
       <ContextState
          contextName = "-[RezzoAnnotation title]:RezzoAnnotation.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.info.title">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "__76-[OutboxViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke:OutboxViewController.m">
@@ -68,6 +89,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[PhotoInfo categoryString]:PhotoInfo.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.resources">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[DescriptionViewController updateView]:DescriptionViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -84,6 +113,22 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[CategoriesViewController tableView:didSelectRowAtIndexPath:]:CategoriesViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "textField.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SplashScreenController viewDidLoad]:SplashScreenController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageView.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "+[Brain initialize]:Brain.m">
          <PersistentStrings>
             <PersistentString
@@ -91,6 +136,17 @@
             </PersistentString>
             <PersistentString
                value = "sInstance.userDefs">
+            </PersistentString>
+            <PersistentString
+               value = "sInstance.resources">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CategoriesViewController updateCustomCell:tableView:atIndexPath:]:CategoriesViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

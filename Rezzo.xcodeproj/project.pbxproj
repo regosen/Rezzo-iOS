@@ -19,6 +19,10 @@
 		E41EA90E175AE32600485FBA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41EA90C175AE32600485FBA /* MapViewController.m */; };
 		E41EA916175B10B900485FBA /* rezzo-57.png in Resources */ = {isa = PBXBuildFile; fileRef = E41EA915175B10B900485FBA /* rezzo-57.png */; };
 		E41EA918175B10BE00485FBA /* rezzo-114.png in Resources */ = {isa = PBXBuildFile; fileRef = E41EA917175B10BE00485FBA /* rezzo-114.png */; };
+		E46524EC176145E400C5B4FB /* CategoriesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E46524EB176145E400C5B4FB /* CategoriesCustomCell.m */; };
+		E4A74CFE1767D5EC009F5DB1 /* first-launch-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */; };
+		E4A74D011767D8DE009F5DB1 /* SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */; };
+		E4A74D0317680721009F5DB1 /* first-launch-screen-960.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A74D0217680721009F5DB1 /* first-launch-screen-960.png */; };
 		E4D1D02F17597BE2007D9F93 /* Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D01117597BE2007D9F93 /* Brain.m */; };
 		E4D1D03117597BE2007D9F93 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01417597BE2007D9F93 /* Default-568h@2x.png */; };
 		E4D1D03217597BE2007D9F93 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01517597BE2007D9F93 /* Default.png */; };
@@ -57,6 +61,12 @@
 		E41EA90C175AE32600485FBA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = SOURCE_ROOT; };
 		E41EA915175B10B900485FBA /* rezzo-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-57.png"; sourceTree = "<group>"; };
 		E41EA917175B10BE00485FBA /* rezzo-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-114.png"; sourceTree = "<group>"; };
+		E46524EA176145E400C5B4FB /* CategoriesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCustomCell.h; sourceTree = SOURCE_ROOT; };
+		E46524EB176145E400C5B4FB /* CategoriesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesCustomCell.m; sourceTree = SOURCE_ROOT; };
+		E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first-launch-screen.png"; sourceTree = "<group>"; };
+		E4A74CFF1767D8DE009F5DB1 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenController.h; sourceTree = SOURCE_ROOT; };
+		E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenController.m; sourceTree = SOURCE_ROOT; };
+		E4A74D0217680721009F5DB1 /* first-launch-screen-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first-launch-screen-960.png"; sourceTree = "<group>"; };
 		E4D1D01017597BE2007D9F93 /* Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Brain.h; path = Files/Brain.h; sourceTree = SOURCE_ROOT; };
 		E4D1D01117597BE2007D9F93 /* Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Brain.m; path = Files/Brain.m; sourceTree = SOURCE_ROOT; };
 		E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Rezzo-Info.plist"; path = "Files/Rezzo-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -103,6 +113,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4A74CFC1767D5BD009F5DB1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E4D1D01417597BE2007D9F93 /* Default-568h@2x.png */,
+				E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */,
+				E4A74D0217680721009F5DB1 /* first-launch-screen-960.png */,
+				E4D1D01517597BE2007D9F93 /* Default.png */,
+				E4D1D01617597BE2007D9F93 /* Default@2x.png */,
+				E4D1D02017597BE2007D9F93 /* first.png */,
+				E4D1D02117597BE2007D9F93 /* first@2x.png */,
+				E41EA917175B10BE00485FBA /* rezzo-114.png */,
+				E4D1D02D17597BE2007D9F93 /* second.png */,
+				E4D1D02E17597BE2007D9F93 /* second@2x.png */,
+				E41EA915175B10B900485FBA /* rezzo-57.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		E4D1D01717597BE2007D9F93 /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +145,7 @@
 		E4F0FE9E1745859100CD3650 = {
 			isa = PBXGroup;
 			children = (
-				E41EA917175B10BE00485FBA /* rezzo-114.png */,
-				E41EA915175B10B900485FBA /* rezzo-57.png */,
+				E4A74CFC1767D5BD009F5DB1 /* Images */,
 				E4F0FEB01745859100CD3650 /* Files */,
 				E4F0FEA91745859100CD3650 /* Frameworks */,
 				E4F0FEA81745859100CD3650 /* Products */,
@@ -151,8 +178,12 @@
 		E4F0FEB01745859100CD3650 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4A74CFF1767D8DE009F5DB1 /* SplashScreenController.h */,
+				E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */,
 				E41EA909175AE32500485FBA /* RezzoAnnotation.h */,
 				E41EA90A175AE32500485FBA /* RezzoAnnotation.m */,
+				E46524EA176145E400C5B4FB /* CategoriesCustomCell.h */,
+				E46524EB176145E400C5B4FB /* CategoriesCustomCell.m */,
 				E41EA90B175AE32500485FBA /* MapViewController.h */,
 				E41EA90C175AE32600485FBA /* MapViewController.m */,
 				E41EA905175AD72C00485FBA /* CategoriesViewController.h */,
@@ -165,21 +196,14 @@
 				E4D1D01117597BE2007D9F93 /* Brain.m */,
 				E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */,
 				E4D1D01317597BE2007D9F93 /* Rezzo-Prefix.pch */,
-				E4D1D01417597BE2007D9F93 /* Default-568h@2x.png */,
-				E4D1D01517597BE2007D9F93 /* Default.png */,
-				E4D1D01617597BE2007D9F93 /* Default@2x.png */,
 				E4D1D01717597BE2007D9F93 /* en.lproj */,
 				E4D1D01E17597BE2007D9F93 /* MainViewController.h */,
 				E4D1D01F17597BE2007D9F93 /* MainViewController.m */,
-				E4D1D02017597BE2007D9F93 /* first.png */,
-				E4D1D02117597BE2007D9F93 /* first@2x.png */,
 				E4D1D02217597BE2007D9F93 /* RezzoAppDelegate.h */,
 				E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */,
 				E4D1D02617597BE2007D9F93 /* main.m */,
 				E4D1D02717597BE2007D9F93 /* PhotoViewController.h */,
 				E4D1D02817597BE2007D9F93 /* PhotoViewController.m */,
-				E4D1D02D17597BE2007D9F93 /* second.png */,
-				E4D1D02E17597BE2007D9F93 /* second@2x.png */,
 			);
 			name = Files;
 			path = FlickrFetcher;
@@ -249,6 +273,8 @@
 				E4D1D04117597BE2007D9F93 /* second@2x.png in Resources */,
 				E41EA916175B10B900485FBA /* rezzo-57.png in Resources */,
 				E41EA918175B10BE00485FBA /* rezzo-114.png in Resources */,
+				E4A74CFE1767D5EC009F5DB1 /* first-launch-screen.png in Resources */,
+				E4A74D0317680721009F5DB1 /* first-launch-screen-960.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +295,8 @@
 				E41EA907175AD72C00485FBA /* CategoriesViewController.m in Sources */,
 				E41EA90D175AE32600485FBA /* RezzoAnnotation.m in Sources */,
 				E41EA90E175AE32600485FBA /* MapViewController.m in Sources */,
+				E46524EC176145E400C5B4FB /* CategoriesCustomCell.m in Sources */,
+				E4A74D011767D8DE009F5DB1 /* SplashScreenController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

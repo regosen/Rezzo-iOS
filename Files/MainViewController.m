@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "DescriptionViewController.h"
 #import "Brain.h"
+#import "SplashScreenController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
 #import <AssetsLibrary/ALAsset.h>
@@ -32,7 +33,8 @@
 
 #pragma mark - UI callbacks
 
-- (void) viewWillAppear:(BOOL)animated {
+- (void) viewWillAppear:(BOOL)animated
+{
     [self.tableView reloadData];
 }
 
@@ -40,8 +42,19 @@
 {
     [super viewDidLoad];
     
-	// add top bar button items
+    // show splash screen view at first launch
+    NSUserDefaults* userDefs = [NSUserDefaults standardUserDefaults];
+    NSNumber* hasLaunched = [userDefs objectForKey:@"FirstLaunch"];
+    if (!hasLaunched)
+    {
+        [self performSegueWithIdentifier:@"Splash" sender:self];
+        
+        [userDefs setObject:[NSNumber numberWithBool:YES] forKey:@"FirstLaunch"];
+        [userDefs synchronize];
+    }
+
     
+	// add top bar button items
     UIBarButtonItem *uploadButton          = [[UIBarButtonItem alloc]
                                            initWithTitle:@"Upload" style:UIBarButtonItemStylePlain
                                            target:self action:@selector(uploadPhotos:)];
@@ -68,6 +81,7 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -187,7 +201,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         // so we have to use locationManager instead
         if (picker.sourceType == UIImagePickerControllerSourceTypeCamera)
         {
-            
             PhotoInfo* newPhoto = [[PhotoInfo alloc] init];
             newPhoto.image = image;
             newPhoto.location = self.locationManager.location.coordinate;

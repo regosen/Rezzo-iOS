@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4F0FEA61745859100CD3650"
-               BuildableName = "DailyFuzzy.app"
+               BuildableName = "Rezzo.app"
                BlueprintName = "Rezzo"
                ReferencedContainer = "container:Rezzo.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4F0FEA61745859100CD3650"
-            BuildableName = "DailyFuzzy.app"
+            BuildableName = "Rezzo.app"
             BlueprintName = "Rezzo"
             ReferencedContainer = "container:Rezzo.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4F0FEA61745859100CD3650"
-            BuildableName = "DailyFuzzy.app"
+            BuildableName = "Rezzo.app"
             BlueprintName = "Rezzo"
             ReferencedContainer = "container:Rezzo.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4F0FEA61745859100CD3650"
-            BuildableName = "DailyFuzzy.app"
+            BuildableName = "Rezzo.app"
             BlueprintName = "Rezzo"
             ReferencedContainer = "container:Rezzo.xcodeproj">
          </BuildableReference>
