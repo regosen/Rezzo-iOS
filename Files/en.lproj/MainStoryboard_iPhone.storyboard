@@ -179,7 +179,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UE-FQ-RO9"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UE-FQ-RO9">
+                                <connections>
+                                    <outlet property="delegate" destination="8qB-Yb-MeO" id="Mrf-fh-WeQ"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -199,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="2158" y="266"/>
         </scene>
-        <!--Main View Controller - Favorites-->
+        <!--Main View Controller - Rezzo-->
         <scene sceneID="YPt-bU-5Zw">
             <objects>
-                <tableViewController title="Favorites" id="UOi-cv-kuu" customClass="MainViewController" sceneMemberID="viewController">
+                <tableViewController title="Rezzo" id="UOi-cv-kuu" customClass="MainViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Tn7-pr-v9r">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,7 +243,6 @@
                             <outlet property="delegate" destination="UOi-cv-kuu" id="8Sf-69-2mt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Top Places" id="Q5N-gt-EhJ"/>
                     <navigationItem key="navigationItem" id="EhE-SN-TKA"/>
                     <connections>
                         <segue destination="fPl-h3-2Y3" kind="push" identifier="Map Photos" id="eCR-gq-BWj"/>
@@ -292,7 +295,7 @@
             </objects>
             <point key="canvasLocation" x="2159" y="970"/>
         </scene>
-        <!--Map View Controller - Map-->
+        <!--Map View Controller-->
         <scene sceneID="218-SP-h6d">
             <objects>
                 <viewController id="fPl-h3-2Y3" customClass="MapViewController" sceneMemberID="viewController">
@@ -310,7 +313,6 @@
                             <constraint firstItem="LNp-VP-JQM" firstAttribute="top" secondItem="CaA-0i-W8h" secondAttribute="top" type="default" id="a3r-n8-vub"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="dqG-oS-7fr"/>
                     <navigationItem key="navigationItem" id="VN9-dG-YFB"/>
                     <connections>
                         <outlet property="mapView" destination="LNp-VP-JQM" id="4SV-JL-d3V"/>
@@ -367,6 +369,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="h8h-Qk-Hj5"/>
+        <segue reference="lai-lc-s4Y"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,7 +21,7 @@
 
 - (NSString *)title
 {
-    return (self.info.title && self.info.title.length > 0) ? self.info.title : @"(Untitled)";
+    return self.info.title;
 }
 
 - (NSString *)subtitle

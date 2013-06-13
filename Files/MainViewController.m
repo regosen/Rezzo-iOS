@@ -26,6 +26,8 @@
 @property (nonatomic, strong) UIAlertView *alertView;
 @property (nonatomic, strong) UIActivityIndicatorView* spinner;
 
+@property (nonatomic, strong) UIPopoverController *iPadPopover;
+
 @end
 
 
@@ -72,10 +74,10 @@
                                            target:self action:@selector(addImageFromLibrary:)];
     
     self.navigationItem.leftBarButtonItems =
-    [NSArray arrayWithObjects:uploadButton, mapButton, nil];
+    [NSArray arrayWithObjects:addButton, cameraButton, nil];
     
     self.navigationItem.rightBarButtonItems =
-    [NSArray arrayWithObjects:addButton, cameraButton, nil];
+    [NSArray arrayWithObjects:uploadButton, mapButton, nil];
     
     // init locationManager (for camera uploads)
     self.locationManager = [[CLLocationManager alloc] init];
@@ -167,10 +169,23 @@
         if ([mediaTypes containsObject:(NSString *)kUTTypeImage]) {
             UIImagePickerController *picker = [[UIImagePickerController alloc] init];
             picker.delegate = self;
+            
             picker.sourceType = sourceType;
             picker.mediaTypes = [NSArray arrayWithObject:(NSString *)kUTTypeImage];
             picker.allowsEditing = YES;
-            [self presentViewController:picker animated:YES completion:nil];
+            picker.navigationBar.opaque = true;
+            
+            // following block posted by phix23 on stackoverflow: iPad photo album image picker requires popover
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+            {
+                UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:picker];
+                [popover presentPopoverFromRect:CGRectMake(0,0,400.0,400.0) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+                self.iPadPopover = popover;
+            }
+            else
+            {
+                [self presentViewController:picker animated:YES completion:nil];
+            }
         }
     }
 }
@@ -187,6 +202,11 @@
 
 - (void)dismissImagePicker
 {
+    if (self.iPadPopover)
+    {
+        [self.iPadPopover dismissPopoverAnimated:YES];
+        self.iPadPopover = nil;
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

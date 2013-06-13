@@ -29,7 +29,16 @@
     [super viewDidLoad];
     
     CGSize screenSize = self.view.bounds.size;
-    NSString* fileName = (screenSize.height == 460) ? @"first-launch-screen-960" : @"first-launch-screen";
+    NSString* fileName = @"first-launch-screen";
+    
+    if (screenSize.height == 460) // old screen size
+    {
+        fileName = [NSString stringWithFormat:@"%@-960", fileName];
+    }
+    else if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        fileName = [NSString stringWithFormat:@"%@-ipad", fileName];
+    }
     NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"png"];
     self.imageView.image = [UIImage imageWithContentsOfFile:path];
 

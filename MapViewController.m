@@ -166,8 +166,8 @@ didChangeDragState:(MKAnnotationViewDragState)newState
     [self updateRegion];
 }
 
-// don't update region here- this triggers whenever the user pans
 /*
+// don't update region here- this triggers whenever the user pans
 - (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView
 {
     [self updateRegion];

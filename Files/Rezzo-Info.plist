@@ -16,6 +16,8 @@
 			<array>
 				<string>rezzo-57.png</string>
 				<string>rezzo-114.png</string>
+				<string>rezzo-72.png</string>
+				<string>rezzo-144.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -98,9 +100,6 @@
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>

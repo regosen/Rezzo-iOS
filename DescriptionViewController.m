@@ -33,14 +33,14 @@
 - (void) updateView
 {
     PhotoInfo* photo = [[Brain get] selectedPhoto];
-    self.titleField.text = photo.title;
+    self.titleField.text = [photo.title isEqualToString:DEFAULT_TITLE] ? @"" : photo.title;
     self.notesField.text = photo.notes;
 }
 
 - (void) keyboardDidHide:(id)sender
 {
     PhotoInfo* photo = [[Brain get] selectedPhoto];
-    photo.title = self.titleField.text;
+    photo.title = ([self.titleField.text length] == 0) ? DEFAULT_TITLE : self.titleField.text;
     photo.notes = self.notesField.text;
 }
     

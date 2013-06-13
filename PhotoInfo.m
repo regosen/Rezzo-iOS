@@ -13,7 +13,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.title = [[NSString alloc] init];
+        self.title = DEFAULT_TITLE;
         self.notes = [[NSString alloc] init];
         self.resources = [[NSMutableDictionary alloc] init];
 #if USING_CUSTOM_CATEGORIES

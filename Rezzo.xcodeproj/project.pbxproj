@@ -20,24 +20,25 @@
 		E41EA916175B10B900485FBA /* rezzo-57.png in Resources */ = {isa = PBXBuildFile; fileRef = E41EA915175B10B900485FBA /* rezzo-57.png */; };
 		E41EA918175B10BE00485FBA /* rezzo-114.png in Resources */ = {isa = PBXBuildFile; fileRef = E41EA917175B10BE00485FBA /* rezzo-114.png */; };
 		E46524EC176145E400C5B4FB /* CategoriesCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E46524EB176145E400C5B4FB /* CategoriesCustomCell.m */; };
+		E48B601B1769518500402FB9 /* rezzo-72.png in Resources */ = {isa = PBXBuildFile; fileRef = E48B601A1769518500402FB9 /* rezzo-72.png */; };
+		E48B601D1769518900402FB9 /* rezzo-144.png in Resources */ = {isa = PBXBuildFile; fileRef = E48B601C1769518900402FB9 /* rezzo-144.png */; };
+		E48B601F176951AF00402FB9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E48B601E176951AF00402FB9 /* Default.png */; };
+		E48B6021176951B200402FB9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E48B6020176951B200402FB9 /* Default@2x.png */; };
+		E48F943B17694CE2003C6443 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E48F943A17694CE2003C6443 /* Default-Portrait~ipad.png */; };
+		E48F943D17694CEB003C6443 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E48F943C17694CEB003C6443 /* Default-Portrait@2x~ipad.png */; };
+		E48F943F17694D7D003C6443 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E48F943E17694D7D003C6443 /* Default-568h@2x.png */; };
+		E48F944117694EC3003C6443 /* first-launch-screen-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E48F944017694EC3003C6443 /* first-launch-screen-ipad.png */; };
 		E4A74CFE1767D5EC009F5DB1 /* first-launch-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */; };
 		E4A74D011767D8DE009F5DB1 /* SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */; };
 		E4A74D0317680721009F5DB1 /* first-launch-screen-960.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A74D0217680721009F5DB1 /* first-launch-screen-960.png */; };
 		E4D1D02F17597BE2007D9F93 /* Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D01117597BE2007D9F93 /* Brain.m */; };
-		E4D1D03117597BE2007D9F93 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01417597BE2007D9F93 /* Default-568h@2x.png */; };
-		E4D1D03217597BE2007D9F93 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01517597BE2007D9F93 /* Default.png */; };
-		E4D1D03317597BE2007D9F93 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01617597BE2007D9F93 /* Default@2x.png */; };
 		E4D1D03417597BE2007D9F93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01817597BE2007D9F93 /* InfoPlist.strings */; };
 		E4D1D03517597BE2007D9F93 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01A17597BE2007D9F93 /* MainStoryboard_iPad.storyboard */; };
 		E4D1D03617597BE2007D9F93 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D01C17597BE2007D9F93 /* MainStoryboard_iPhone.storyboard */; };
 		E4D1D03717597BE2007D9F93 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D01F17597BE2007D9F93 /* MainViewController.m */; };
-		E4D1D03817597BE2007D9F93 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D02017597BE2007D9F93 /* first.png */; };
-		E4D1D03917597BE2007D9F93 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D02117597BE2007D9F93 /* first@2x.png */; };
 		E4D1D03A17597BE2007D9F93 /* RezzoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */; };
 		E4D1D03C17597BE2007D9F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D02617597BE2007D9F93 /* main.m */; };
 		E4D1D03D17597BE2007D9F93 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D02817597BE2007D9F93 /* PhotoViewController.m */; };
-		E4D1D04017597BE2007D9F93 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D02D17597BE2007D9F93 /* second.png */; };
-		E4D1D04117597BE2007D9F93 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D1D02E17597BE2007D9F93 /* second@2x.png */; };
 		E4F0FEAB1745859100CD3650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F0FEAA1745859100CD3650 /* UIKit.framework */; };
 		E4F0FEAD1745859100CD3650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F0FEAC1745859100CD3650 /* Foundation.framework */; };
 		E4F0FEAF1745859100CD3650 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F0FEAE1745859100CD3650 /* CoreGraphics.framework */; };
@@ -63,6 +64,14 @@
 		E41EA917175B10BE00485FBA /* rezzo-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-114.png"; sourceTree = "<group>"; };
 		E46524EA176145E400C5B4FB /* CategoriesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCustomCell.h; sourceTree = SOURCE_ROOT; };
 		E46524EB176145E400C5B4FB /* CategoriesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesCustomCell.m; sourceTree = SOURCE_ROOT; };
+		E48B601A1769518500402FB9 /* rezzo-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-72.png"; sourceTree = "<group>"; };
+		E48B601C1769518900402FB9 /* rezzo-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-144.png"; sourceTree = "<group>"; };
+		E48B601E176951AF00402FB9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E48B6020176951B200402FB9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E48F943A17694CE2003C6443 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		E48F943C17694CEB003C6443 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		E48F943E17694D7D003C6443 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E48F944017694EC3003C6443 /* first-launch-screen-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first-launch-screen-ipad.png"; path = "Files/first-launch-screen-ipad.png"; sourceTree = "<group>"; };
 		E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first-launch-screen.png"; sourceTree = "<group>"; };
 		E4A74CFF1767D8DE009F5DB1 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenController.h; sourceTree = SOURCE_ROOT; };
 		E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenController.m; sourceTree = SOURCE_ROOT; };
@@ -70,24 +79,16 @@
 		E4D1D01017597BE2007D9F93 /* Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Brain.h; path = Files/Brain.h; sourceTree = SOURCE_ROOT; };
 		E4D1D01117597BE2007D9F93 /* Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Brain.m; path = Files/Brain.m; sourceTree = SOURCE_ROOT; };
 		E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Rezzo-Info.plist"; path = "Files/Rezzo-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E4D1D01317597BE2007D9F93 /* Rezzo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Rezzo-Prefix.pch"; path = "Users/regosen/Documents/Projects/Rezzo/Files/Rezzo-Prefix.pch"; sourceTree = SDKROOT; };
-		E4D1D01417597BE2007D9F93 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Files/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
-		E4D1D01517597BE2007D9F93 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Files/Default.png; sourceTree = SOURCE_ROOT; };
-		E4D1D01617597BE2007D9F93 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Files/Default@2x.png"; sourceTree = SOURCE_ROOT; };
 		E4D1D01917597BE2007D9F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E4D1D01B17597BE2007D9F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		E4D1D01D17597BE2007D9F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		E4D1D01E17597BE2007D9F93 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Files/MainViewController.h; sourceTree = SOURCE_ROOT; };
 		E4D1D01F17597BE2007D9F93 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Files/MainViewController.m; sourceTree = SOURCE_ROOT; };
-		E4D1D02017597BE2007D9F93 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = Files/first.png; sourceTree = SOURCE_ROOT; };
-		E4D1D02117597BE2007D9F93 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "Files/first@2x.png"; sourceTree = SOURCE_ROOT; };
 		E4D1D02217597BE2007D9F93 /* RezzoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RezzoAppDelegate.h; path = Files/RezzoAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RezzoAppDelegate.m; path = Files/RezzoAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		E4D1D02617597BE2007D9F93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Files/main.m; sourceTree = SOURCE_ROOT; };
 		E4D1D02717597BE2007D9F93 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = Files/PhotoViewController.h; sourceTree = SOURCE_ROOT; };
 		E4D1D02817597BE2007D9F93 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = Files/PhotoViewController.m; sourceTree = SOURCE_ROOT; };
-		E4D1D02D17597BE2007D9F93 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = Files/second.png; sourceTree = SOURCE_ROOT; };
-		E4D1D02E17597BE2007D9F93 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "Files/second@2x.png"; sourceTree = SOURCE_ROOT; };
 		E4F0FEA71745859100CD3650 /* Rezzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rezzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F0FEAA1745859100CD3650 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E4F0FEAC1745859100CD3650 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,17 +117,18 @@
 		E4A74CFC1767D5BD009F5DB1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				E4D1D01417597BE2007D9F93 /* Default-568h@2x.png */,
+				E48B601E176951AF00402FB9 /* Default.png */,
+				E48B6020176951B200402FB9 /* Default@2x.png */,
+				E48F943E17694D7D003C6443 /* Default-568h@2x.png */,
+				E48F943C17694CEB003C6443 /* Default-Portrait@2x~ipad.png */,
+				E48F943A17694CE2003C6443 /* Default-Portrait~ipad.png */,
 				E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */,
 				E4A74D0217680721009F5DB1 /* first-launch-screen-960.png */,
-				E4D1D01517597BE2007D9F93 /* Default.png */,
-				E4D1D01617597BE2007D9F93 /* Default@2x.png */,
-				E4D1D02017597BE2007D9F93 /* first.png */,
-				E4D1D02117597BE2007D9F93 /* first@2x.png */,
-				E41EA917175B10BE00485FBA /* rezzo-114.png */,
-				E4D1D02D17597BE2007D9F93 /* second.png */,
-				E4D1D02E17597BE2007D9F93 /* second@2x.png */,
+				E48F944017694EC3003C6443 /* first-launch-screen-ipad.png */,
 				E41EA915175B10B900485FBA /* rezzo-57.png */,
+				E41EA917175B10BE00485FBA /* rezzo-114.png */,
+				E48B601A1769518500402FB9 /* rezzo-72.png */,
+				E48B601C1769518900402FB9 /* rezzo-144.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -195,7 +197,6 @@
 				E4D1D01017597BE2007D9F93 /* Brain.h */,
 				E4D1D01117597BE2007D9F93 /* Brain.m */,
 				E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */,
-				E4D1D01317597BE2007D9F93 /* Rezzo-Prefix.pch */,
 				E4D1D01717597BE2007D9F93 /* en.lproj */,
 				E4D1D01E17597BE2007D9F93 /* MainViewController.h */,
 				E4D1D01F17597BE2007D9F93 /* MainViewController.m */,
@@ -261,20 +262,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D1D03117597BE2007D9F93 /* Default-568h@2x.png in Resources */,
-				E4D1D03217597BE2007D9F93 /* Default.png in Resources */,
-				E4D1D03317597BE2007D9F93 /* Default@2x.png in Resources */,
 				E4D1D03417597BE2007D9F93 /* InfoPlist.strings in Resources */,
 				E4D1D03517597BE2007D9F93 /* MainStoryboard_iPad.storyboard in Resources */,
 				E4D1D03617597BE2007D9F93 /* MainStoryboard_iPhone.storyboard in Resources */,
-				E4D1D03817597BE2007D9F93 /* first.png in Resources */,
-				E4D1D03917597BE2007D9F93 /* first@2x.png in Resources */,
-				E4D1D04017597BE2007D9F93 /* second.png in Resources */,
-				E4D1D04117597BE2007D9F93 /* second@2x.png in Resources */,
 				E41EA916175B10B900485FBA /* rezzo-57.png in Resources */,
 				E41EA918175B10BE00485FBA /* rezzo-114.png in Resources */,
 				E4A74CFE1767D5EC009F5DB1 /* first-launch-screen.png in Resources */,
 				E4A74D0317680721009F5DB1 /* first-launch-screen-960.png in Resources */,
+				E48F944117694EC3003C6443 /* first-launch-screen-ipad.png in Resources */,
+				E48F943B17694CE2003C6443 /* Default-Portrait~ipad.png in Resources */,
+				E48F943D17694CEB003C6443 /* Default-Portrait@2x~ipad.png in Resources */,
+				E48F943F17694D7D003C6443 /* Default-568h@2x.png in Resources */,
+				E48B601B1769518500402FB9 /* rezzo-72.png in Resources */,
+				E48B601D1769518900402FB9 /* rezzo-144.png in Resources */,
+				E48B601F176951AF00402FB9 /* Default.png in Resources */,
+				E48B6021176951B200402FB9 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,12 +400,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Files/Rezzo-Prefix.pch";
 				INFOPLIST_FILE = "Files/Rezzo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = Rezzo;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,12 +421,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Files/Rezzo-Prefix.pch";
 				INFOPLIST_FILE = "Files/Rezzo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = Rezzo;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

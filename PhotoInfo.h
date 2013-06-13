@@ -10,6 +10,8 @@
 #import <MapKit/MapKit.h>
 #import "Brain.h"
 
+#define DEFAULT_TITLE @"Untitled"
+
 @interface PhotoInfo : NSObject
 
 @property (nonatomic, strong) NSString* title;
