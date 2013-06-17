@@ -14,14 +14,6 @@
          contextName = "+[Brain photoAccessed:]:Brain.m">
       </ContextState>
       <ContextState
-         contextName = "-[TagSearchTableViewController tableView:cellForRowAtIndexPath:]:TagSearchTableViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "tag.name">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[CategoriesViewController tableView:cellForRowAtIndexPath:]:CategoriesViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -30,10 +22,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[Brain initDatabaseWithSender:]:Brain.m">
+         contextName = "-[TagSearchTableViewController tableView:cellForRowAtIndexPath:]:TagSearchTableViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.database.documentState">
+               value = "tag.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SplashScreenController viewDidLoad]:SplashScreenController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageView.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -46,10 +46,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__76-[OutboxViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke:OutboxViewController.m">
+         contextName = "-[Brain initDatabaseWithSender:]:Brain.m">
          <PersistentStrings>
             <PersistentString
-               value = "(__bridge NSDictionary*)imagePropertiesDictionary">
+               value = "self.database.documentState">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -70,13 +70,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[PictureViewController resetImage]:PictureViewController.m">
+         contextName = "-[PhotoInfo categoryString]:PhotoInfo.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.imageView.frame">
-            </PersistentString>
-            <PersistentString
-               value = "self.imageURL">
+               value = "self.resources">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -89,10 +86,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[PhotoInfo categoryString]:PhotoInfo.m">
+         contextName = "-[PictureViewController resetImage]:PictureViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.resources">
+               value = "self.imageView.frame">
+            </PersistentString>
+            <PersistentString
+               value = "self.imageURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__76-[OutboxViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke:OutboxViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(__bridge NSDictionary*)imagePropertiesDictionary">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -101,6 +109,9 @@
          <PersistentStrings>
             <PersistentString
                value = "photo.title">
+            </PersistentString>
+            <PersistentString
+               value = "i">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -117,14 +128,6 @@
          <PersistentStrings>
             <PersistentString
                value = "textField.text">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[SplashScreenController viewDidLoad]:SplashScreenController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.imageView.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -183,6 +186,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[MainViewController imagePickerController:didFinishPickingMediaWithInfo:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "newPhoto.location">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[PictureListControllerForCoreData prepareForSegue:sender:]:PictureListControllerForCoreData.m">
       </ContextState>
       <ContextState
@@ -203,6 +214,14 @@
       </ContextState>
       <ContextState
          contextName = "-[PictureListControllerForCoreData tableView:numberOfRowsInSection:]:PictureListControllerForCoreData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MapViewController updateMapView]:MapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mapView.annotations">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

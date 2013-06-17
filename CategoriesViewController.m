@@ -64,7 +64,9 @@
     
     if (!self.customRowsPerSection)
     {
+#if USING_CUSTOM_CATEGORIES
         PhotoInfo* photo = [[Brain get] selectedPhoto];
+#endif
         
         NSUInteger sections = [Brain getResources:YES].allKeys.count;
         self.customRowsPerSection = calloc(sections, sizeof(NSInteger));

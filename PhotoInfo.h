@@ -15,6 +15,7 @@
 @interface PhotoInfo : NSObject
 
 @property (nonatomic, strong) NSString* title;
+@property (nonatomic, strong) NSString* region;
 @property (nonatomic, strong) NSString* notes;
 
 @property (nonatomic) CLLocationCoordinate2D location;

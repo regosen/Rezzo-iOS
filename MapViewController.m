@@ -15,6 +15,9 @@
 
 @interface MapViewController() <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
+
 @end
 
 @implementation MapViewController
@@ -36,6 +39,12 @@
 {
     _annotations = annotations;
     [self updateMapView];
+    if (annotations.count > 0)
+    {
+        RezzoAnnotation* annotation = [annotations objectAtIndex:0];
+        self.latitudeLabel.text = [NSString stringWithFormat:@"%g",annotation.info.location.latitude];
+        self.longitudeLabel.text = [NSString stringWithFormat:@"%g",annotation.info.location.longitude];
+    }
 }
 
 // update region to encompass all annotations
@@ -115,6 +124,8 @@ didChangeDragState:(MKAnnotationViewDragState)newState
     {
         RezzoAnnotation* annotation = annotationView.annotation;
         annotation.info.location = annotationView.annotation.coordinate;
+        self.latitudeLabel.text = [NSString stringWithFormat:@"%g",annotation.info.location.latitude];
+        self.longitudeLabel.text = [NSString stringWithFormat:@"%g",annotation.info.location.longitude];
     }
 }
 

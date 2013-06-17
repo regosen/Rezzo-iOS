@@ -14,6 +14,7 @@
 @property (nonatomic, weak) id<UploadControllerDelegate> delegate;
 @property (nonatomic, strong) NSDictionary* resources;
 @property (nonatomic, strong) NSUserDefaults* userDefs;
+@property (nonatomic, strong) NSString* lastRegion;
 
 @end
 
@@ -23,7 +24,9 @@
 static Brain *sInstance;
 
 #define SERVER_URL @"http://47yf.localtunnel.com"
-#define CACHE_KEY  @"resources"
+#define RESOURCES_KEY  @"resources"
+#define LAST_REGION_KEY  @"last_region"
+#define REGIONS_KEY  @"regions"
 
 + (void)initialize
 {
@@ -36,10 +39,14 @@ static Brain *sInstance;
         sInstance.userDefs = [NSUserDefaults standardUserDefaults];
         
         // 1. get resource list from cache (if exists)
-        NSDictionary* resources = [sInstance.userDefs objectForKey:CACHE_KEY];
-        if (resources)
+        NSDictionary* resources = [sInstance.userDefs objectForKey:RESOURCES_KEY];
+        NSArray* regions = [sInstance.userDefs objectForKey:REGIONS_KEY];
+        NSString* lastRegion = [sInstance.userDefs objectForKey:LAST_REGION_KEY];
+        if (resources && regions && lastRegion)
         {
             sInstance.resources = resources;
+            sInstance.regions = regions;
+            sInstance.lastRegion = lastRegion;
         }
         else
         {
@@ -47,8 +54,10 @@ static Brain *sInstance;
             NSBundle *bundle = [NSBundle mainBundle];
             NSString *pListPath = [bundle pathForResource:@"Info" ofType:@"plist"];
             NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:pListPath];
+            sInstance.regions = [dictionary objectForKey:@"Regions"];
             sInstance.resources = [dictionary objectForKey:@"Resources"];
-            [sInstance.userDefs setObject:sInstance.resources forKey:CACHE_KEY];
+            [sInstance.userDefs setObject:sInstance.resources forKey:RESOURCES_KEY];
+            [sInstance.userDefs setObject:sInstance.regions forKey:REGIONS_KEY];
             [sInstance.userDefs synchronize];
         }
         
@@ -60,6 +69,8 @@ static Brain *sInstance;
 {
     return sInstance;
 }
+
+#pragma mark - API
 
 + (NSDictionary*) getResources:(BOOL)all
 {
@@ -82,6 +93,17 @@ static Brain *sInstance;
 + (void) deselectPhoto
 {
     sInstance.selectedPhoto = nil;
+}
+
++ (NSString*) getLastRegion
+{
+    return sInstance.lastRegion;
+}
+
++ (void) setLastRegion:(NSString*)region
+{
+    sInstance.lastRegion = region;
+    [sInstance.userDefs setObject:region forKey:LAST_REGION_KEY];
 }
 
 + (void) uploadPhotos:(id <UploadControllerDelegate>)delegate
@@ -165,7 +187,7 @@ static Brain *sInstance;
         }
         
         // convert data into string
-        NSString *responseString = [[NSString alloc] initWithBytes:[responseData bytes]
+        NSString *responseString __unused = [[NSString alloc] initWithBytes:[responseData bytes]
                                                              length:[responseData length]
                                                            encoding:NSUTF8StringEncoding];
         //NSLog(@"done");

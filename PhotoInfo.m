@@ -14,6 +14,7 @@
     self = [super init];
     if (self) {
         self.title = DEFAULT_TITLE;
+        self.region = [[NSString alloc] init];
         self.notes = [[NSString alloc] init];
         self.resources = [[NSMutableDictionary alloc] init];
 #if USING_CUSTOM_CATEGORIES
@@ -29,7 +30,10 @@
     
     for (NSArray* categories in self.resources.allValues)
     {
-        [descArray addObject:[categories componentsJoinedByString:@", "]];
+        if (categories.count > 0)
+        {
+            [descArray addObject:[categories componentsJoinedByString:@", "]];
+        }
     }
     
 #if USING_CUSTOM_CATEGORIES
@@ -46,6 +50,7 @@
 {
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
     [dict setObject:self.title forKey:@"title"];
+    [dict setObject:self.region forKey:@"region"];
     [dict setObject:self.notes forKey:@"notes"];
     [dict setObject:self.resources forKey:@"resources"];
 #if USING_CUSTOM_CATEGORIES

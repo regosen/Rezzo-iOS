@@ -39,6 +39,8 @@
 		E4D1D03A17597BE2007D9F93 /* RezzoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */; };
 		E4D1D03C17597BE2007D9F93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D02617597BE2007D9F93 /* main.m */; };
 		E4D1D03D17597BE2007D9F93 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D02817597BE2007D9F93 /* PhotoViewController.m */; };
+		E4EDEB2A176EB11400A236A0 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EDEB29176EB11400A236A0 /* libTestFlight.a */; };
+		E4EDEB2C176EB15700A236A0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EDEB2B176EB15700A236A0 /* libz.dylib */; };
 		E4F0FEAB1745859100CD3650 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F0FEAA1745859100CD3650 /* UIKit.framework */; };
 		E4F0FEAD1745859100CD3650 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F0FEAC1745859100CD3650 /* Foundation.framework */; };
 		E4F0FEAF1745859100CD3650 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F0FEAE1745859100CD3650 /* CoreGraphics.framework */; };
@@ -89,6 +91,9 @@
 		E4D1D02617597BE2007D9F93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Files/main.m; sourceTree = SOURCE_ROOT; };
 		E4D1D02717597BE2007D9F93 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = Files/PhotoViewController.h; sourceTree = SOURCE_ROOT; };
 		E4D1D02817597BE2007D9F93 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = Files/PhotoViewController.m; sourceTree = SOURCE_ROOT; };
+		E4EDEB28176EB0E700A236A0 /* TestFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlight/TestFlight.h; sourceTree = SOURCE_ROOT; };
+		E4EDEB29176EB11400A236A0 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = TestFlight/libTestFlight.a; sourceTree = "<group>"; };
+		E4EDEB2B176EB15700A236A0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E4F0FEA71745859100CD3650 /* Rezzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rezzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F0FEAA1745859100CD3650 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E4F0FEAC1745859100CD3650 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,11 +105,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4EDEB2C176EB15700A236A0 /* libz.dylib in Frameworks */,
 				E41EA901175ACBFB00485FBA /* AssetsLibrary.framework in Frameworks */,
 				E41EA8FF175ACB9800485FBA /* ImageIO.framework in Frameworks */,
 				E41EA8F0175AC43200485FBA /* MobileCoreServices.framework in Frameworks */,
 				E41EA8EE175ABE6900485FBA /* MapKit.framework in Frameworks */,
 				E41EA8EC175ABC1600485FBA /* CoreLocation.framework in Frameworks */,
+				E4EDEB2A176EB11400A236A0 /* libTestFlight.a in Frameworks */,
 				E4F0FEAB1745859100CD3650 /* UIKit.framework in Frameworks */,
 				E4F0FEAD1745859100CD3650 /* Foundation.framework in Frameworks */,
 				E4F0FEAF1745859100CD3650 /* CoreGraphics.framework in Frameworks */,
@@ -147,6 +154,8 @@
 		E4F0FE9E1745859100CD3650 = {
 			isa = PBXGroup;
 			children = (
+				E4EDEB2B176EB15700A236A0 /* libz.dylib */,
+				E4EDEB29176EB11400A236A0 /* libTestFlight.a */,
 				E4A74CFC1767D5BD009F5DB1 /* Images */,
 				E4F0FEB01745859100CD3650 /* Files */,
 				E4F0FEA91745859100CD3650 /* Frameworks */,
@@ -180,6 +189,7 @@
 		E4F0FEB01745859100CD3650 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4EDEB28176EB0E700A236A0 /* TestFlight.h */,
 				E4A74CFF1767D8DE009F5DB1 /* SplashScreenController.h */,
 				E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */,
 				E41EA909175AE32500485FBA /* RezzoAnnotation.h */,
@@ -393,6 +403,7 @@
 		E4F0FED91745859100CD3650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -404,8 +415,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/TestFlight\"",
 				);
 				PRODUCT_NAME = Rezzo;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A187A298-5ABA-4F4E-A399-C6826BF80921";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,6 +427,7 @@
 		E4F0FEDA1745859100CD3650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -425,8 +439,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/TestFlight\"",
 				);
 				PRODUCT_NAME = Rezzo;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A187A298-5ABA-4F4E-A399-C6826BF80921";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};

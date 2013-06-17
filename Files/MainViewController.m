@@ -224,8 +224,19 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
             PhotoInfo* newPhoto = [[PhotoInfo alloc] init];
             newPhoto.image = image;
             newPhoto.location = self.locationManager.location.coordinate;
-            [Brain addAndSelectPhoto:newPhoto];
-            [self performSegueWithIdentifier:@"Detail" sender:self];
+            
+            if (newPhoto.location.latitude == 0 && newPhoto.location.longitude == 0)
+            {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Photo is missing GPS data" message:@"Please ensure Location Services is On (under Settings->Privacy for Photo and Rezzo)." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                
+                [alertView show];
+            }
+            else
+            {
+                [Brain addAndSelectPhoto:newPhoto];
+                [self performSegueWithIdentifier:@"Detail" sender:self];
+            }
+            
             [self dismissImagePicker];
             return;
         }
@@ -273,9 +284,18 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                          {
                              location.longitude = -location.longitude;
                          }
-                         newPhoto.location = location;
-                         [Brain addAndSelectPhoto:newPhoto];
-                         [self performSegueWithIdentifier:@"Detail" sender:self];
+                         if (location.latitude == 0 && location.longitude == 0)
+                         {
+                             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Photo is missing GPS data" message:@"Please ensure Location Services is On (under Settings->Privacy for Photo and Rezzo)." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                             
+                             [alertView show];
+                         }
+                         else
+                         {
+                             newPhoto.location = location;
+                             [Brain addAndSelectPhoto:newPhoto];
+                             [self performSegueWithIdentifier:@"Detail" sender:self];
+                         }
                          
                          CFRelease(imagePropertiesDictionary);
                          CFRelease(sourceRef);

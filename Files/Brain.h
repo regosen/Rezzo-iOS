@@ -9,7 +9,7 @@
 #ifndef Rezzo_Brain_h
 #define Rezzo_Brain_h
 
-#define USING_CUSTOM_CATEGORIES 1
+#define USING_CUSTOM_CATEGORIES 0
 
 @class PhotoInfo;
 
@@ -21,16 +21,20 @@
 
 @interface Brain : NSObject
 
-
 + (Brain*)get;
+
 + (NSDictionary*) getResources:(BOOL)all;
 
 + (void) selectPhoto:(PhotoInfo*)photo;
 + (void) addAndSelectPhoto:(PhotoInfo*)photo;
 + (void) deselectPhoto;
 
++ (NSString*) getLastRegion;
++ (void) setLastRegion:(NSString*)region;
+
 + (void) uploadPhotos:(id <UploadControllerDelegate>)delegate;
 
+@property (nonatomic, strong) NSArray* regions;
 @property (nonatomic, strong) NSArray* photos;
 @property (nonatomic, strong) PhotoInfo* selectedPhoto;
 

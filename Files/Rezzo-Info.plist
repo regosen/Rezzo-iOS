@@ -2,6 +2,67 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Regions</key>
+	<array>
+		<string>Arusha	
+Dar es Salaam
+Dodoma	
+Geita	
+Iringa	
+Kagera	
+Katavi	
+Kigoma	
+Kilimanjaro
+Lindi	
+Manyara	
+Mara	
+Mbeya	
+Morogoro
+Mtwara	
+Mwanza	
+Njombe	
+Pemba North
+Pemba South
+Pwani	
+Rukwa	
+Ruvuma	
+Shinyanga
+Simiyu	
+Singida	
+Tabora	
+Tanga	
+Zanzibar Central/South
+</string>
+		<string>Dar es Salaam</string>
+		<string>Dodoma</string>
+		<string>Geita</string>
+		<string>Iringa</string>
+		<string>Kagera</string>
+		<string>Katavi</string>
+		<string>Kigoma</string>
+		<string>Kilimanjaro</string>
+		<string>Lindi</string>
+		<string>Manyara</string>
+		<string>Mara</string>
+		<string>Mbeya</string>
+		<string>Morogoro</string>
+		<string>Mtwara</string>
+		<string>Mwanza</string>
+		<string>Njombe</string>
+		<string>Pemba North</string>
+		<string>Pemba South</string>
+		<string>Pwani</string>
+		<string>Rukwa</string>
+		<string>Ruvuma</string>
+		<string>Shinyanga</string>
+		<string>Simiyu</string>
+		<string>Singida</string>
+		<string>Tabora</string>
+		<string>Tanga</string>
+		<string>Zanzibar Central/South</string>
+		<string>Zanzibar North</string>
+		<string>Zanzibar Urban/West</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

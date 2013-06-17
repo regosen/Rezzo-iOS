@@ -9,11 +9,14 @@
 #import "RezzoAppDelegate.h"
 #import "MainViewController.h"
 #import "Brain.h"
+#import "TestFlight.h"
 
 @implementation RezzoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    [TestFlight takeOff:@"ccd159bd-fc2f-44df-94c4-351b16798217"];
     // Override point for customization after application launch.
     [Brain get];
     UITabBarController *tabController = (UITabBarController *)self.window.rootViewController;
