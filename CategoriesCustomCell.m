@@ -14,13 +14,14 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     CategoriesViewController* vc = (CategoriesViewController*)self.delegate;
-    [vc setActiveCustomCell:self];
+    [vc beginEditingCustomCell:self];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
-    CategoriesViewController* vc = (CategoriesViewController*)self.delegate;
-    vc.currentCustomText = theTextField.text;
     [theTextField resignFirstResponder];
+     
+    CategoriesViewController* vc = (CategoriesViewController*)self.delegate;
+    [vc endEditingCustomCell:self text:theTextField.text];
     return YES;
 }
 

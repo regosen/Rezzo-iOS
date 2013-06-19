@@ -122,6 +122,7 @@ didChangeDragState:(MKAnnotationViewDragState)newState
 {
     if (newState == MKAnnotationViewDragStateEnding)
     {
+        [TestFlight passCheckpoint:@"Dragging map point"];
         RezzoAnnotation* annotation = annotationView.annotation;
         annotation.info.location = annotationView.annotation.coordinate;
         self.latitudeLabel.text = [NSString stringWithFormat:@"%g",annotation.info.location.latitude];

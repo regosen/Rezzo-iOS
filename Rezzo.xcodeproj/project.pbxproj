@@ -403,6 +403,7 @@
 		E4F0FED91745859100CD3650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,6 +419,7 @@
 					"\"$(SRCROOT)/TestFlight\"",
 				);
 				PRODUCT_NAME = Rezzo;
+				PROVISIONING_PROFILE = "A187A298-5ABA-4F4E-A399-C6826BF80921";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A187A298-5ABA-4F4E-A399-C6826BF80921";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -427,6 +429,7 @@
 		E4F0FEDA1745859100CD3650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -442,6 +445,7 @@
 					"\"$(SRCROOT)/TestFlight\"",
 				);
 				PRODUCT_NAME = Rezzo;
+				PROVISIONING_PROFILE = "A187A298-5ABA-4F4E-A399-C6826BF80921";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A187A298-5ABA-4F4E-A399-C6826BF80921";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

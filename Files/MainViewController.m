@@ -191,12 +191,14 @@
 }
 
 - (void)addImageFromCamera:(UIBarButtonItem *)sender {
+    [TestFlight passCheckpoint:@"Using camera"];
     [self.locationManager startUpdatingLocation];
     [self addImageFromSource:UIImagePickerControllerSourceTypeCamera];
     [self.locationManager stopUpdatingLocation];
 }
 
 - (void)addImageFromLibrary:(UIBarButtonItem *)sender {
+    [TestFlight passCheckpoint:@"Using photo library"];
     [self addImageFromSource:UIImagePickerControllerSourceTypePhotoLibrary];
 }
 

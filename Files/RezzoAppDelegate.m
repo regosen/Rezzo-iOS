@@ -9,7 +9,6 @@
 #import "RezzoAppDelegate.h"
 #import "MainViewController.h"
 #import "Brain.h"
-#import "TestFlight.h"
 
 @implementation RezzoAppDelegate
 

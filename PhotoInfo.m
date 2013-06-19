@@ -7,6 +7,7 @@
 //
 
 #import "PhotoInfo.h"
+#import "Brain.h"
 
 @implementation PhotoInfo
 
@@ -14,7 +15,7 @@
     self = [super init];
     if (self) {
         self.title = DEFAULT_TITLE;
-        self.region = [[NSString alloc] init];
+        self.region = [Brain getLastRegion];
         self.notes = [[NSString alloc] init];
         self.resources = [[NSMutableDictionary alloc] init];
 #if USING_CUSTOM_CATEGORIES
@@ -39,7 +40,10 @@
 #if USING_CUSTOM_CATEGORIES
     for (NSArray* categories in self.customResources.allValues)
     {
-        [descArray addObject:[categories componentsJoinedByString:@", "]];
+        if (categories.count > 0)
+        {
+            [descArray addObject:[categories componentsJoinedByString:@", "]];
+        }
     }
 #endif
     

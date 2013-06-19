@@ -3,10 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[CategoriesViewController customCell:tableView:atIndexPath:check:]:CategoriesViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[CategoriesViewController textForIndexPath:]:CategoriesViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CategoriesCustomCell textFieldShouldReturn:]:CategoriesCustomCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "theTextField.text.length">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

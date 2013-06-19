@@ -9,6 +9,9 @@
 #ifndef Rezzo_Brain_h
 #define Rezzo_Brain_h
 
+#include "TestFlight.h"
+
+#define NSLog TFLog
 #define USING_CUSTOM_CATEGORIES 0
 
 @class PhotoInfo;

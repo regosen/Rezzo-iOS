@@ -11,21 +11,29 @@
 #import "PhotoInfo.h"
 #import "CategoriesCustomCell.h"
 
-@interface CategoriesViewController()
+@interface CategoriesViewController() <CustomCellControllerDelegate>
 
 @property (nonatomic) NSInteger* customRowsPerSection;
-@property (nonatomic, strong) NSIndexPath* currentCustomCell;
+
+@property (nonatomic, strong) NSIndexPath* editingCustomCellPath; // path of custom cell being edited
+@property (nonatomic, strong) NSString* editedCustomText;
 
 @end
 
 @implementation CategoriesViewController
 
 
-#pragma mark - delegate calls
+#pragma mark - CustomCellControllerDelegate calls
 
-- (void) setActiveCustomCell:(UITableViewCell*)cell
+- (void) beginEditingCustomCell:(CategoriesCustomCell*)cell
 {
-    self.currentCustomCell = [self.tableView indexPathForCell:cell];
+    self.editingCustomCellPath = [self.tableView indexPathForCell:cell];
+}
+
+- (void) endEditingCustomCell:(CategoriesCustomCell*)cell text:(NSString*)text
+{
+    self.editedCustomText = text;
+    [self customCell:cell tableView:self.tableView atIndexPath:self.editingCustomCellPath check:(text.length > 0)];
 }
 
 
@@ -112,10 +120,10 @@
     }
     else
     {
-        if ((self.currentCustomCell.row == indexPath.row)
-            && (self.currentCustomCell.section == indexPath.section))
+        if ((self.editingCustomCellPath.row == indexPath.row)
+            && (self.editingCustomCellPath.section == indexPath.section))
         {
-            cell.customText.text = self.currentCustomText;
+            cell.customText.text = self.editedCustomText;
         }
         else
         {
@@ -170,9 +178,9 @@
 #if USING_CUSTOM_CATEGORIES
     PhotoInfo* photo = [[Brain get] selectedPhoto];
     NSString* cellText = cell.customText.text;
-    if (cellText.length == 0)
+    if (check && cellText.length == 0)
     {
-        return;
+        return; // can't select empty cell
     }
     
     NSString* sectionName = [self tableView:nil titleForHeaderInSection:indexPath.section];
@@ -185,44 +193,60 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
         
         // recreate list without unchecked category
+        // this gets tricky because we can uncheck custom cells while editing another
         newList = [[NSMutableArray alloc] init];
+        int customIndex = self.editingCustomCellPath.row - [self listForSection:indexPath.section all:YES].count;
+        int index = 0;
         for (NSString* curCategory in oldList)
         {
-            if (![curCategory isEqualToString:cellText])
-            {
-                [newList addObject:curCategory];
-            }
+            if (self.editingCustomCellPath && index == customIndex) continue;
+            else if ([curCategory isEqualToString:cellText]) continue;
+            
+            [newList addObject:curCategory];
+            index++;
         }
         [photo.customResources setObject:newList forKey:[self tableView:nil titleForHeaderInSection:indexPath.section]];
         
-        // update data
+        // update state
         cell.customText.text = @"";
-        self.customRowsPerSection[indexPath.section] -= 1;
-        self.currentCustomCell = nil;
+        if (self.editingCustomCellPath == indexPath)
+        {
+            self.editingCustomCellPath = nil;
+        }
+        else if (self.editingCustomCellPath.row > indexPath.row)
+        {
+            // user unchecked a custom cell that's above the one currently being edited
+            // we have to update the index of the currently edited cell
+            self.editingCustomCellPath = [NSIndexPath indexPathForRow:indexPath.row - 1 inSection:indexPath.section];
+        }
         
-        // update view
-        [tableView beginUpdates];
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-        [tableView endUpdates];
+        // remove row if it wasn't the last one (always leave one empty custom cell)
+        if (indexPath.row < [self tableView:self.tableView numberOfRowsInSection:indexPath.section] - 1)
+        {
+            self.customRowsPerSection[indexPath.section] -= 1;
+            [tableView beginUpdates];
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+            [tableView endUpdates];
+        }
     }
     else
     {
         // check cell
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         
-        // recreate list with unchecked category
+        // recreate list with addition of checked category
         newList = oldList ? [oldList mutableCopy] : [[NSMutableArray alloc] init];
         [newList addObject:cellText];
         [photo.customResources setObject:newList forKey:[self tableView:nil titleForHeaderInSection:indexPath.section]];
         
-        // update data
+        // update state
         self.customRowsPerSection[indexPath.section] += 1;
-        NSAssert(self.currentCustomCell, @"currentCustomCell was nil");
-        [cell.customText resignFirstResponder];
-        self.currentCustomCell = nil;
+        NSAssert(self.editingCustomCellPath, @"editingCustomCellPath was nil");
+        [cell.customText resignFirstResponder]; // hide keyboard
+        self.editingCustomCellPath = nil;
 
-        // update view
-        NSIndexPath* nextPath = [NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section];
+        // "insert" a new cell at the end
+        NSIndexPath* nextPath = [NSIndexPath indexPathForRow:[self tableView:self.tableView numberOfRowsInSection:indexPath.section] - 1 inSection:indexPath.section];
         [tableView beginUpdates];
         [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:nextPath] withRowAnimation:YES];
         [tableView endUpdates];

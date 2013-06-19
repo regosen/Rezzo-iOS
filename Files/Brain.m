@@ -23,7 +23,7 @@
 
 static Brain *sInstance;
 
-#define SERVER_URL @"http://47yf.localtunnel.com"
+#define SERVER_URL @"http://rezzo.herokuapp.com/ios"
 #define RESOURCES_KEY  @"resources"
 #define LAST_REGION_KEY  @"last_region"
 #define REGIONS_KEY  @"regions"
@@ -56,6 +56,7 @@ static Brain *sInstance;
             NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:pListPath];
             sInstance.regions = [dictionary objectForKey:@"Regions"];
             sInstance.resources = [dictionary objectForKey:@"Resources"];
+            sInstance.lastRegion = [sInstance.regions objectAtIndex:0];
             [sInstance.userDefs setObject:sInstance.resources forKey:RESOURCES_KEY];
             [sInstance.userDefs setObject:sInstance.regions forKey:REGIONS_KEY];
             [sInstance.userDefs synchronize];
@@ -108,19 +109,16 @@ static Brain *sInstance;
 
 + (void) uploadPhotos:(id <UploadControllerDelegate>)delegate
 {
+    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Uploading %d photos", sInstance.photos.count]];
+    
     sInstance.delegate = delegate;
     dispatch_queue_t downloadQueue = dispatch_queue_create("flickr downloader", NULL);
     dispatch_async(downloadQueue, ^{
         
-#if 0 // for printing instead of uploading data
         for (PhotoInfo* photo in sInstance.photos)
         {
             NSLog(@"%@", [photo jsonString]);
-        }
-        return;
-#endif
-        
-        
+        }        
         // following block posted by robhasacamera on stackoverflow: HTTP post of UIImage and params to webserver
         NSMutableURLRequest *uploadRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
         
@@ -138,7 +136,7 @@ static Brain *sInstance;
         
         //add body
         NSMutableData *postBody = [NSMutableData data];
-        //NSLog(@"body made");
+        NSLog(@"body made");
         
         int index=0;
         for (PhotoInfo* photo in sInstance.photos)
@@ -163,7 +161,7 @@ static Brain *sInstance;
             [postBody appendData:imgData];
             [postBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
              */
-            //NSLog(@"entry added");
+            NSLog(@"entry added");
             
             index++;
         }
@@ -173,14 +171,14 @@ static Brain *sInstance;
         // add body to post
         [uploadRequest setHTTPBody:postBody];
         
-        //NSLog(@"body set");
+        NSLog(@"body set");
         // pointers to some necessary objects
         NSHTTPURLResponse* response =[[NSHTTPURLResponse alloc] init];
         NSError* error = nil;
         
         // synchronous filling of data from HTTP POST response
         NSData *responseData = [NSURLConnection sendSynchronousRequest:uploadRequest returningResponse:&response error:&error];
-        //NSLog(@"just sent request");
+        NSLog(@"just sent request");
         
         if (error) {
             [delegate doneUploading:NO errorMessage:error.localizedDescription];
@@ -190,13 +188,11 @@ static Brain *sInstance;
         NSString *responseString __unused = [[NSString alloc] initWithBytes:[responseData bytes]
                                                              length:[responseData length]
                                                            encoding:NSUTF8StringEncoding];
-        //NSLog(@"done");
         // see if we get a welcome result
-#if DEBUG
         NSLog(@"%@", responseString);
-#endif
         
         // success, clear local photo list
+        [TestFlight passCheckpoint:@"Finished uploading"];
         sInstance.photos = [[NSArray alloc] init];
         [sInstance.delegate doneUploading:YES errorMessage:nil];
     });

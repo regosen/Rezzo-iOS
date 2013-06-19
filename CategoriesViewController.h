@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#include "CategoriesCustomCell.h"
 
-@interface CategoriesViewController : UITableViewController
 
-- (void) setActiveCustomCell:(UITableViewCell*)cell;
+@protocol CustomCellControllerDelegate <NSObject>
 
-@property (nonatomic, strong) NSString* currentCustomText;
+- (void) beginEditingCustomCell:(CategoriesCustomCell*)cell;
+- (void) endEditingCustomCell:(CategoriesCustomCell*)cell text:(NSString*)text;
+
+@end
+
+@interface CategoriesViewController : UITableViewController <CustomCellControllerDelegate>
 
 @end
