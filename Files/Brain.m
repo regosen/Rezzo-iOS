@@ -57,6 +57,14 @@ static Brain *sInstance;
             sInstance.regions = [dictionary objectForKey:@"Regions"];
             sInstance.resources = [dictionary objectForKey:@"Resources"];
             sInstance.lastRegion = [sInstance.regions objectAtIndex:0];
+            NSRange tRange = [sInstance.lastRegion rangeOfString:@"\t"];
+            if (tRange.location != NSNotFound)
+            {
+                sInstance.lastRegion = [sInstance.lastRegion substringToIndex:tRange.location];
+                NSMutableArray *fixedRegions = [sInstance.regions mutableCopy];
+                [fixedRegions setObject:sInstance.lastRegion atIndexedSubscript:0];
+                sInstance.regions = fixedRegions;
+            }
             [sInstance.userDefs setObject:sInstance.resources forKey:RESOURCES_KEY];
             [sInstance.userDefs setObject:sInstance.regions forKey:REGIONS_KEY];
             [sInstance.userDefs synchronize];
@@ -112,7 +120,7 @@ static Brain *sInstance;
     [TestFlight passCheckpoint:[NSString stringWithFormat:@"Uploading %d photos", sInstance.photos.count]];
     
     sInstance.delegate = delegate;
-    dispatch_queue_t downloadQueue = dispatch_queue_create("flickr downloader", NULL);
+    dispatch_queue_t downloadQueue = dispatch_queue_create("resource uploader", NULL);
     dispatch_async(downloadQueue, ^{
         
         for (PhotoInfo* photo in sInstance.photos)

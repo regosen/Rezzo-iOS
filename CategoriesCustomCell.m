@@ -11,6 +11,8 @@
 
 @implementation CategoriesCustomCell
 
+#if USING_CUSTOM_CATEGORIES
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     CategoriesViewController* vc = (CategoriesViewController*)self.delegate;
@@ -24,5 +26,7 @@
     [vc endEditingCustomCell:self text:theTextField.text];
     return YES;
 }
+
+#endif //USING_CUSTOM_CATEGORIES
 
 @end

@@ -10,8 +10,12 @@
 
 @interface CategoriesCustomCell : UITableViewCell
 
+#if USING_CUSTOM_CATEGORIES
+
 @property (weak, nonatomic) IBOutlet UITextField *customText;
 
 @property (weak, nonatomic) UITableView* delegate;
+
+#endif //USING_CUSTOM_CATEGORIES
 
 @end

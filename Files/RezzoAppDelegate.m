@@ -1,6 +1,6 @@
 //
-//  FlickrFetcherAppDelegate.m
-//  FlickrFetcher
+//  RezzoAppDelegate.m
+//  Rezzo
 //
 //  Created by Rego on 5/16/13.
 //  Copyright (c) 2013 Regaip Sen. All rights reserved.

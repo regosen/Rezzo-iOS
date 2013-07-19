@@ -154,6 +154,9 @@
                value = "sInstance.naturalResources">
             </PersistentString>
             <PersistentString
+               value = "sInstance.regions">
+            </PersistentString>
+            <PersistentString
                value = "sInstance.userDefs">
             </PersistentString>
             <PersistentString
