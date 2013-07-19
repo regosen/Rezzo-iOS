@@ -156,7 +156,7 @@ static Brain *sInstance;
             [postBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
             
             /*
-             // TODO: upload image
+             // TODO: We might consider uploading the image as well in the future, but not for now.
             //image
             [postBody appendData:[[NSString stringWithFormat:@"--%@\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
             [postBody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"rezzo_item_image_%d\"; filename=\"image%d.jpg\"\r\n", index, index] dataUsingEncoding:NSUTF8StringEncoding]];
