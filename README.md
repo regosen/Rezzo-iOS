@@ -1,11 +1,15 @@
-==iOS Repository for Rezzo Project
+*NOTE: The Rezzo project is split into 3 repositories; this one is for the iOS app.  To see the other repositories, visit the links below.*
+* [Server](https://github.com/IanHumin/rezzo-rails)
+* [Android App](https://github.com/IanHumin/rezzo-android)
+
+<h1>REZZO</h1>
 
 ￼￼￼￼Helping Peace Corps Volunteers map the natural, infrastructure, and skill resources within their communities.
 
 
-==Motivation/Problem Statement
+<h3>Motivation / Problem Statement</h3>
 
-Volunteers spend much of their time identifying key resources within the communities they work. The location of these resources, whether the local health clinic or a clean water source, are critical to the success of a volunteer’s projects. 
+Peace Corps Volunteers spend much of their time identifying key resources (such as a health clinic or clean water source) within the communities where they work. Knowing the locations of these resources is critical to the success of a volunteer’s projects. 
 
 There are currently few options for volunteers to catalog this information for future volunteers, and is hard to share with partner organizations or local government ministries.
 
@@ -14,19 +18,27 @@ Our goal was to develop an easy-to-use web and mobile app that volunteers can us
 These resource maps can be used to quickly identify critical components to any development project and anticipate potential challenges. 
 
 
-==Project Goals
+<h3>How it Works</h3>
 
-World wide usability across multiple languages.
+1. Volunteers take photos of resources (hospitals, schools, etc.) with a smartphone or other GPS-enabled device.
+2. *This step depends on what you're using:*
+  - **Using an app (iOS / Android)**:  The app has screens that let you enter information about the pictures.  Once you have a data connection you can hit the "Upload" button to send the info to our server.
+  - **Using a browser**: There's a website (in progress) for uploading photos directly to the server and entering the info from there.
+3. We have a website (in progress) that will let you search and filter a map using the data people have uploaded.
 
-Quick and simply way for volunteers to map, label, and categorize a resource.
+<h3>Current Status</h3>
 
-Possibility to map resources on mobile device even if data network is not available.
+We are currently beta testing this app with Peace Corps Volunteers both locally and abroad (Tanzania).
 
-Easy way to search and filter map, to identify useful resource.
+To get involved, please contact Jordan Welty: jjwelty@gmail.com.
 
+<h3>Future Goals</h3>
 
-==Other Rezzo Repositories
+- Finish functionality of Android app.
 
-* [*Web Server*](https://github.com/IanHumin/rezzo-rails)
+- Improve functionality of website.
 
-* [*Android*](https://github.com/IanHumin/rezzo-android)
+- Mobile-friendly website for searching and filtering map.
+
+- World-wide usability across multiple languages.
+
