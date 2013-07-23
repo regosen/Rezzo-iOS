@@ -149,7 +149,7 @@
     }
     else
     {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Upload failed" message:[NSString stringWithFormat: @"Problem uploading to server.  Please try again later.\n%@", message] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Upload failed" message:[NSString stringWithFormat: @"Problem uploading to server.  Please confirm data connection or try again later.\n%@", message] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         
         [alertView show];
     }

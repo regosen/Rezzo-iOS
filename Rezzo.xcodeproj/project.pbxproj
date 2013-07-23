@@ -47,50 +47,50 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E41EA8E8175ABAB300485FBA /* PhotoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoInfo.h; sourceTree = SOURCE_ROOT; };
-		E41EA8E9175ABAB300485FBA /* PhotoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoInfo.m; sourceTree = SOURCE_ROOT; };
+		E41EA8E8175ABAB300485FBA /* PhotoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoInfo.h; path = Classes/Models/PhotoInfo.h; sourceTree = SOURCE_ROOT; };
+		E41EA8E9175ABAB300485FBA /* PhotoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoInfo.m; path = Classes/Models/PhotoInfo.m; sourceTree = SOURCE_ROOT; };
 		E41EA8EB175ABC1600485FBA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E41EA8ED175ABE6900485FBA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E41EA8EF175AC43200485FBA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		E41EA8FE175ACB9800485FBA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E41EA900175ACBFB00485FBA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		E41EA902175AD4DC00485FBA /* DescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionViewController.h; sourceTree = SOURCE_ROOT; };
-		E41EA903175AD4DD00485FBA /* DescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = SOURCE_ROOT; };
-		E41EA905175AD72C00485FBA /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = SOURCE_ROOT; };
-		E41EA906175AD72C00485FBA /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = SOURCE_ROOT; };
-		E41EA909175AE32500485FBA /* RezzoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RezzoAnnotation.h; sourceTree = SOURCE_ROOT; };
-		E41EA90A175AE32500485FBA /* RezzoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RezzoAnnotation.m; sourceTree = SOURCE_ROOT; };
-		E41EA90B175AE32500485FBA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = SOURCE_ROOT; };
-		E41EA90C175AE32600485FBA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = SOURCE_ROOT; };
-		E41EA915175B10B900485FBA /* rezzo-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-57.png"; sourceTree = "<group>"; };
-		E41EA917175B10BE00485FBA /* rezzo-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-114.png"; sourceTree = "<group>"; };
-		E46524EA176145E400C5B4FB /* CategoriesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesCustomCell.h; sourceTree = SOURCE_ROOT; };
-		E46524EB176145E400C5B4FB /* CategoriesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesCustomCell.m; sourceTree = SOURCE_ROOT; };
-		E48B601A1769518500402FB9 /* rezzo-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-72.png"; sourceTree = "<group>"; };
-		E48B601C1769518900402FB9 /* rezzo-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rezzo-144.png"; sourceTree = "<group>"; };
-		E48B601E176951AF00402FB9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		E48B6020176951B200402FB9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		E48F943A17694CE2003C6443 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
-		E48F943C17694CEB003C6443 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
-		E48F943E17694D7D003C6443 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E48F944017694EC3003C6443 /* first-launch-screen-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first-launch-screen-ipad.png"; path = "Files/first-launch-screen-ipad.png"; sourceTree = "<group>"; };
-		E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first-launch-screen.png"; sourceTree = "<group>"; };
-		E4A74CFF1767D8DE009F5DB1 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenController.h; sourceTree = SOURCE_ROOT; };
-		E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenController.m; sourceTree = SOURCE_ROOT; };
-		E4A74D0217680721009F5DB1 /* first-launch-screen-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first-launch-screen-960.png"; sourceTree = "<group>"; };
-		E4D1D01017597BE2007D9F93 /* Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Brain.h; path = Files/Brain.h; sourceTree = SOURCE_ROOT; };
-		E4D1D01117597BE2007D9F93 /* Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Brain.m; path = Files/Brain.m; sourceTree = SOURCE_ROOT; };
-		E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Rezzo-Info.plist"; path = "Files/Rezzo-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E41EA902175AD4DC00485FBA /* DescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DescriptionViewController.h; path = Classes/Controllers/DescriptionViewController.h; sourceTree = SOURCE_ROOT; };
+		E41EA903175AD4DD00485FBA /* DescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DescriptionViewController.m; path = Classes/Controllers/DescriptionViewController.m; sourceTree = SOURCE_ROOT; };
+		E41EA905175AD72C00485FBA /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesViewController.h; path = Classes/Controllers/CategoriesView/CategoriesViewController.h; sourceTree = SOURCE_ROOT; };
+		E41EA906175AD72C00485FBA /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesViewController.m; path = Classes/Controllers/CategoriesView/CategoriesViewController.m; sourceTree = SOURCE_ROOT; };
+		E41EA909175AE32500485FBA /* RezzoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RezzoAnnotation.h; path = Classes/Controllers/MapView/RezzoAnnotation.h; sourceTree = SOURCE_ROOT; };
+		E41EA90A175AE32500485FBA /* RezzoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RezzoAnnotation.m; path = Classes/Controllers/MapView/RezzoAnnotation.m; sourceTree = SOURCE_ROOT; };
+		E41EA90B175AE32500485FBA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Classes/Controllers/MapView/MapViewController.h; sourceTree = SOURCE_ROOT; };
+		E41EA90C175AE32600485FBA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Classes/Controllers/MapView/MapViewController.m; sourceTree = SOURCE_ROOT; };
+		E41EA915175B10B900485FBA /* rezzo-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rezzo-57.png"; path = "Resources/Images/rezzo-57.png"; sourceTree = "<group>"; };
+		E41EA917175B10BE00485FBA /* rezzo-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rezzo-114.png"; path = "Resources/Images/rezzo-114.png"; sourceTree = "<group>"; };
+		E46524EA176145E400C5B4FB /* CategoriesCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesCustomCell.h; path = Classes/Controllers/CategoriesView/CategoriesCustomCell.h; sourceTree = SOURCE_ROOT; };
+		E46524EB176145E400C5B4FB /* CategoriesCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesCustomCell.m; path = Classes/Controllers/CategoriesView/CategoriesCustomCell.m; sourceTree = SOURCE_ROOT; };
+		E48B601A1769518500402FB9 /* rezzo-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rezzo-72.png"; path = "Resources/Images/rezzo-72.png"; sourceTree = "<group>"; };
+		E48B601C1769518900402FB9 /* rezzo-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rezzo-144.png"; path = "Resources/Images/rezzo-144.png"; sourceTree = "<group>"; };
+		E48B601E176951AF00402FB9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Images/Default.png; sourceTree = "<group>"; };
+		E48B6020176951B200402FB9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Images/Default@2x.png"; sourceTree = "<group>"; };
+		E48F943A17694CE2003C6443 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "Resources/Images/Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		E48F943C17694CEB003C6443 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "Resources/Images/Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		E48F943E17694D7D003C6443 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		E48F944017694EC3003C6443 /* first-launch-screen-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first-launch-screen-ipad.png"; path = "Resources/Images/first-launch-screen-ipad.png"; sourceTree = "<group>"; };
+		E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first-launch-screen.png"; path = "Resources/Images/first-launch-screen.png"; sourceTree = "<group>"; };
+		E4A74CFF1767D8DE009F5DB1 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScreenController.h; path = Classes/Controllers/SplashScreenController.h; sourceTree = SOURCE_ROOT; };
+		E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashScreenController.m; path = Classes/Controllers/SplashScreenController.m; sourceTree = SOURCE_ROOT; };
+		E4A74D0217680721009F5DB1 /* first-launch-screen-960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first-launch-screen-960.png"; path = "Resources/Images/first-launch-screen-960.png"; sourceTree = "<group>"; };
+		E4D1D01017597BE2007D9F93 /* Brain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Brain.h; path = Classes/Models/Brain.h; sourceTree = SOURCE_ROOT; };
+		E4D1D01117597BE2007D9F93 /* Brain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Brain.m; path = Classes/Models/Brain.m; sourceTree = SOURCE_ROOT; };
+		E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Rezzo-Info.plist"; path = "Resources/Rezzo-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E4D1D01917597BE2007D9F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		E4D1D01B17597BE2007D9F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		E4D1D01D17597BE2007D9F93 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		E4D1D01E17597BE2007D9F93 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Files/MainViewController.h; sourceTree = SOURCE_ROOT; };
-		E4D1D01F17597BE2007D9F93 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Files/MainViewController.m; sourceTree = SOURCE_ROOT; };
-		E4D1D02217597BE2007D9F93 /* RezzoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RezzoAppDelegate.h; path = Files/RezzoAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RezzoAppDelegate.m; path = Files/RezzoAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		E4D1D02617597BE2007D9F93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Files/main.m; sourceTree = SOURCE_ROOT; };
-		E4D1D02717597BE2007D9F93 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = Files/PhotoViewController.h; sourceTree = SOURCE_ROOT; };
-		E4D1D02817597BE2007D9F93 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = Files/PhotoViewController.m; sourceTree = SOURCE_ROOT; };
+		E4D1D01E17597BE2007D9F93 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/Controllers/MainViewController.h; sourceTree = SOURCE_ROOT; };
+		E4D1D01F17597BE2007D9F93 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/Controllers/MainViewController.m; sourceTree = SOURCE_ROOT; };
+		E4D1D02217597BE2007D9F93 /* RezzoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RezzoAppDelegate.h; path = Classes/Delegates/RezzoAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RezzoAppDelegate.m; path = Classes/Delegates/RezzoAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		E4D1D02617597BE2007D9F93 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/Delegates/main.m; sourceTree = SOURCE_ROOT; };
+		E4D1D02717597BE2007D9F93 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = Classes/Controllers/PhotoViewController.h; sourceTree = SOURCE_ROOT; };
+		E4D1D02817597BE2007D9F93 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = Classes/Controllers/PhotoViewController.m; sourceTree = SOURCE_ROOT; };
 		E4EDEB28176EB0E700A236A0 /* TestFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = TestFlight/TestFlight.h; sourceTree = SOURCE_ROOT; };
 		E4EDEB29176EB11400A236A0 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = TestFlight/libTestFlight.a; sourceTree = "<group>"; };
 		E4EDEB2B176EB15700A236A0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -121,7 +121,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E4A74CFC1767D5BD009F5DB1 /* Images */ = {
+		E4383F5D179F3F5500E3D924 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E4D1D02217597BE2007D9F93 /* RezzoAppDelegate.h */,
+				E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */,
+				E4D1D02617597BE2007D9F93 /* main.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		E4383F5E179F3F7B00E3D924 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E41EA8E8175ABAB300485FBA /* PhotoInfo.h */,
+				E41EA8E9175ABAB300485FBA /* PhotoInfo.m */,
+				E4D1D01017597BE2007D9F93 /* Brain.h */,
+				E4D1D01117597BE2007D9F93 /* Brain.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E4383F5F179F3F9800E3D924 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				E48B601E176951AF00402FB9 /* Default.png */,
@@ -140,6 +161,58 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		E456123E179F35B00010104A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E4F0FEB01745859100CD3650 /* Controllers */,
+				E4383F5D179F3F5500E3D924 /* Delegates */,
+				E4383F5E179F3F7B00E3D924 /* Models */,
+			);
+			name = Classes;
+			path = Rezzo;
+			sourceTree = "<group>";
+		};
+		E456123F179F35FD0010104A /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				E41EA909175AE32500485FBA /* RezzoAnnotation.h */,
+				E41EA90A175AE32500485FBA /* RezzoAnnotation.m */,
+				E41EA90B175AE32500485FBA /* MapViewController.h */,
+				E41EA90C175AE32600485FBA /* MapViewController.m */,
+			);
+			name = MapView;
+			sourceTree = "<group>";
+		};
+		E4561240179F362B0010104A /* CategoriesView */ = {
+			isa = PBXGroup;
+			children = (
+				E46524EA176145E400C5B4FB /* CategoriesCustomCell.h */,
+				E46524EB176145E400C5B4FB /* CategoriesCustomCell.m */,
+				E41EA905175AD72C00485FBA /* CategoriesViewController.h */,
+				E41EA906175AD72C00485FBA /* CategoriesViewController.m */,
+			);
+			name = CategoriesView;
+			sourceTree = "<group>";
+		};
+		E4561241179F36560010104A /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				E4EDEB28176EB0E700A236A0 /* TestFlight.h */,
+				E4EDEB2B176EB15700A236A0 /* libz.dylib */,
+				E4EDEB29176EB11400A236A0 /* libTestFlight.a */,
+			);
+			name = TestFlight;
+			sourceTree = "<group>";
+		};
+		E4A74CFC1767D5BD009F5DB1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4D1D01717597BE2007D9F93 /* en.lproj */,
+				E4383F5F179F3F9800E3D924 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		E4D1D01717597BE2007D9F93 /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,16 +221,15 @@
 				E4D1D01C17597BE2007D9F93 /* MainStoryboard_iPhone.storyboard */,
 			);
 			name = en.lproj;
-			path = Files/en.lproj;
+			path = Resources/en.lproj;
 			sourceTree = SOURCE_ROOT;
 		};
 		E4F0FE9E1745859100CD3650 = {
 			isa = PBXGroup;
 			children = (
-				E4EDEB2B176EB15700A236A0 /* libz.dylib */,
-				E4EDEB29176EB11400A236A0 /* libTestFlight.a */,
-				E4A74CFC1767D5BD009F5DB1 /* Images */,
-				E4F0FEB01745859100CD3650 /* Files */,
+				E4561241179F36560010104A /* TestFlight */,
+				E456123E179F35B00010104A /* Classes */,
+				E4A74CFC1767D5BD009F5DB1 /* Resources */,
 				E4F0FEA91745859100CD3650 /* Frameworks */,
 				E4F0FEA81745859100CD3650 /* Products */,
 			);
@@ -186,38 +258,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E4F0FEB01745859100CD3650 /* Files */ = {
+		E4F0FEB01745859100CD3650 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E4EDEB28176EB0E700A236A0 /* TestFlight.h */,
-				E4A74CFF1767D8DE009F5DB1 /* SplashScreenController.h */,
-				E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */,
-				E41EA909175AE32500485FBA /* RezzoAnnotation.h */,
-				E41EA90A175AE32500485FBA /* RezzoAnnotation.m */,
-				E46524EA176145E400C5B4FB /* CategoriesCustomCell.h */,
-				E46524EB176145E400C5B4FB /* CategoriesCustomCell.m */,
-				E41EA90B175AE32500485FBA /* MapViewController.h */,
-				E41EA90C175AE32600485FBA /* MapViewController.m */,
-				E41EA905175AD72C00485FBA /* CategoriesViewController.h */,
-				E41EA906175AD72C00485FBA /* CategoriesViewController.m */,
-				E41EA902175AD4DC00485FBA /* DescriptionViewController.h */,
-				E41EA903175AD4DD00485FBA /* DescriptionViewController.m */,
-				E41EA8E8175ABAB300485FBA /* PhotoInfo.h */,
-				E41EA8E9175ABAB300485FBA /* PhotoInfo.m */,
-				E4D1D01017597BE2007D9F93 /* Brain.h */,
-				E4D1D01117597BE2007D9F93 /* Brain.m */,
-				E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */,
-				E4D1D01717597BE2007D9F93 /* en.lproj */,
 				E4D1D01E17597BE2007D9F93 /* MainViewController.h */,
 				E4D1D01F17597BE2007D9F93 /* MainViewController.m */,
-				E4D1D02217597BE2007D9F93 /* RezzoAppDelegate.h */,
-				E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */,
-				E4D1D02617597BE2007D9F93 /* main.m */,
 				E4D1D02717597BE2007D9F93 /* PhotoViewController.h */,
 				E4D1D02817597BE2007D9F93 /* PhotoViewController.m */,
+				E4A74CFF1767D8DE009F5DB1 /* SplashScreenController.h */,
+				E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */,
+				E456123F179F35FD0010104A /* MapView */,
+				E4561240179F362B0010104A /* CategoriesView */,
+				E41EA902175AD4DC00485FBA /* DescriptionViewController.h */,
+				E41EA903175AD4DD00485FBA /* DescriptionViewController.m */,
+				E4D1D01217597BE2007D9F93 /* Rezzo-Info.plist */,
 			);
-			name = Files;
-			path = FlickrFetcher;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,8 +466,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Files/Rezzo-Prefix.pch";
-				INFOPLIST_FILE = "Files/Rezzo-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/Delegates/Rezzo-Prefix.pch";
+				INFOPLIST_FILE = "Resources/Rezzo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,8 +493,8 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Files/Rezzo-Prefix.pch";
-				INFOPLIST_FILE = "Files/Rezzo-Info.plist";
+				GCC_PREFIX_HEADER = "Classes/Delegates/Rezzo-Prefix.pch";
+				INFOPLIST_FILE = "Resources/Rezzo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
