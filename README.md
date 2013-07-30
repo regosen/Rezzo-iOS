@@ -1,6 +1,6 @@
 *NOTE: The Rezzo project is split into 3 repositories; this one is for the iOS app.  To see the other repositories, visit the links below.*
 * [Server](https://github.com/IanHumin/rezzo-rails)
-* [Android App](https://github.com/IanHumin/rezzo-android)
+* [Android App](https://github.com/AndruByrne/Rezzo)
 
 <h1>REZZO</h1>
 
