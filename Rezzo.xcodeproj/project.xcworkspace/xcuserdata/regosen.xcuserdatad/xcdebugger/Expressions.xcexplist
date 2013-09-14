@@ -154,13 +154,13 @@
                value = "sInstance.naturalResources">
             </PersistentString>
             <PersistentString
-               value = "sInstance.regions">
+               value = "sInstance.resources">
             </PersistentString>
             <PersistentString
                value = "sInstance.userDefs">
             </PersistentString>
             <PersistentString
-               value = "sInstance.resources">
+               value = "sInstance.regions">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -193,6 +193,14 @@
          <PersistentStrings>
             <PersistentString
                value = "cell.detailTextLabel.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainViewController onRequestComplete:]:MainViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "alertView.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

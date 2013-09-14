@@ -53,6 +53,8 @@
 
 
 - (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
     // register hiding of keyboard when "Back" button pressed
     [self keyboardDidHide:nil];
 }

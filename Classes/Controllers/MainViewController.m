@@ -9,7 +9,6 @@
 #import "MainViewController.h"
 #import "DescriptionViewController.h"
 #import "Brain.h"
-#import "SplashScreenController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
 #import <AssetsLibrary/ALAsset.h>
@@ -32,6 +31,8 @@
 
 
 @implementation MainViewController
+
+#define WEBAPP_URL [NSURL URLWithString:@"http://codeforsanfrancisco.org/Mobile-Fusion-Tables/RezzoTanzania.html"]
 
 #pragma mark - UI callbacks
 
@@ -57,6 +58,11 @@
 
     
 	// add top bar button items
+    
+    UIBarButtonItem *searchButton          = [[UIBarButtonItem alloc]
+                                              initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
+                                              target:self action:@selector(openSearchApp:)];
+    
     UIBarButtonItem *uploadButton          = [[UIBarButtonItem alloc]
                                            initWithTitle:@"Upload" style:UIBarButtonItemStylePlain
                                            target:self action:@selector(uploadPhotos:)];
@@ -77,7 +83,7 @@
     [NSArray arrayWithObjects:addButton, cameraButton, nil];
     
     self.navigationItem.rightBarButtonItems =
-    [NSArray arrayWithObjects:uploadButton, mapButton, nil];
+    [NSArray arrayWithObjects:uploadButton, mapButton, searchButton, nil];
     
     // init locationManager (for camera uploads)
     self.locationManager = [[CLLocationManager alloc] init];
@@ -137,22 +143,42 @@
     }
 }
 
-- (void) doneUploading:(BOOL)success errorMessage:(NSString*)message
+- (void) onRequestComplete:(NSData*)response
 {
-    [self.spinner stopAnimating];
-    [self.spinner removeFromSuperview];
     [self.alertView dismissWithClickedButtonIndex:0 animated:YES];
-    
-    if (success)
+    NSString* errorMessage = [Brain parseServerResponse:response];
+    // HACK: ignore server error about converting array into string- it still succeeds
+    if (errorMessage == nil || [errorMessage rangeOfString:@"can't convert Array into String"].location != NSNotFound)
     {
+        // success
+        [TestFlight passCheckpoint:@"Finished uploading"];
+        [Brain get].photos = [[NSArray alloc] init];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Done!" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+        [alertView show];
         [self.tableView reloadData];
     }
     else
     {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Upload failed" message:[NSString stringWithFormat: @"Problem uploading to server.  Please confirm data connection or try again later.\n%@", message] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        // fail
+        NSLog(errorMessage);
         
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Can't upload due to the following errors:" message:@"\n\n\n\n\n\n\n\n\n\n" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIWebView* webView = [[UIWebView alloc] init];
+        [webView setFrame:CGRectMake(12,75,260,200)];
+        [webView loadHTMLString:errorMessage baseURL:nil];
+        
+        [alertView addSubview:webView];
         [alertView show];
     }
+    
+    [self.spinner stopAnimating];
+    [self.spinner removeFromSuperview];
+}
+
+- (void)openSearchApp:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:WEBAPP_URL];
 }
 
 - (void)mapPhotos:(id)sender

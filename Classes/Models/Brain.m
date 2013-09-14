@@ -115,6 +115,46 @@ static Brain *sInstance;
     [sInstance.userDefs setObject:region forKey:LAST_REGION_KEY];
 }
 
++ (NSString*) parseServerResponse:(NSData*)response
+{
+    NSError *error = nil;
+    id object = [NSJSONSerialization
+                 JSONObjectWithData:response
+                 options:0
+                 error:&error];
+    
+    if (error || ![object isKindOfClass:[NSDictionary class]])
+    {
+        return [[NSString alloc] initWithBytes:[response bytes] length:[response length] encoding:NSUTF8StringEncoding];
+    }
+    else
+    {
+        NSDictionary *results = object;
+        NSDictionary* errors = [results objectForKey:@"errors"];
+        if (errors)
+        {
+            NSMutableArray* errorList = [[NSMutableArray alloc] init];
+            for (NSString* key in errors) {
+                NSArray* values = [errors objectForKey:key];
+                if (values)
+                {
+                    for (NSString* value in values)
+                    {
+                        [errorList addObject:[NSString stringWithFormat:@"%@ %@", key, value]];
+                    }
+                }
+            }
+            return [errorList componentsJoinedByString:@"\n"];
+        }
+        else if ([results objectForKey:@"user"] == nil)
+        {
+            return [[NSString alloc] initWithBytes:[response bytes] length:[response length] encoding:NSUTF8StringEncoding];
+        }
+    }
+    return nil; // no error
+}
+
+
 + (void) uploadPhotos:(id <UploadControllerDelegate>)delegate
 {
     [TestFlight passCheckpoint:[NSString stringWithFormat:@"Uploading %d photos", sInstance.photos.count]];
@@ -131,20 +171,10 @@ static Brain *sInstance;
         NSMutableURLRequest *uploadRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:SERVER_URL] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
         
         [uploadRequest setHTTPMethod:@"POST"];
-        
-        // just some random text that will never occur in the body
         NSString *stringBoundary = @"0xKhTmLbOuNdArY---This_Is_ThE_BoUnDaRyy---pqo";
-        
-        // header value
-        NSString *headerBoundary = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",
-                                    stringBoundary];
-        
-        // set header
+        NSString *headerBoundary = [NSString stringWithFormat:@"multipart/form-data; boundary=%@", stringBoundary];
         [uploadRequest addValue:headerBoundary forHTTPHeaderField:@"Content-Type"];
-        
-        //add body
         NSMutableData *postBody = [NSMutableData data];
-        NSLog(@"body made");
         
         int index=0;
         for (PhotoInfo* photo in sInstance.photos)
@@ -169,18 +199,12 @@ static Brain *sInstance;
             [postBody appendData:imgData];
             [postBody appendData:[@"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
              */
-            NSLog(@"entry added");
             
             index++;
         }
         // final boundary
         [postBody appendData:[[NSString stringWithFormat:@"--%@--\r\n", stringBoundary] dataUsingEncoding:NSUTF8StringEncoding]];
-        
-        // add body to post
         [uploadRequest setHTTPBody:postBody];
-        
-        NSLog(@"body set");
-        // pointers to some necessary objects
         NSHTTPURLResponse* response =[[NSHTTPURLResponse alloc] init];
         NSError* error = nil;
         
@@ -189,20 +213,12 @@ static Brain *sInstance;
         NSLog(@"just sent request");
         
         if (error) {
-            [delegate doneUploading:NO errorMessage:error.localizedDescription];
+            responseData = [error.localizedDescription dataUsingEncoding:NSUTF8StringEncoding];
         }
         
-        // convert data into string
-        NSString *responseString __unused = [[NSString alloc] initWithBytes:[responseData bytes]
-                                                             length:[responseData length]
-                                                           encoding:NSUTF8StringEncoding];
-        // see if we get a welcome result
-        NSLog(@"%@", responseString);
-        
-        // success, clear local photo list
-        [TestFlight passCheckpoint:@"Finished uploading"];
-        sInstance.photos = [[NSArray alloc] init];
-        [sInstance.delegate doneUploading:YES errorMessage:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [sInstance.delegate onRequestComplete:responseData];
+        });
     });
 }
 

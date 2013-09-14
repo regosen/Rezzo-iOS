@@ -18,7 +18,7 @@
 
 @protocol UploadControllerDelegate <NSObject>
 
-- (void) doneUploading:(BOOL)success errorMessage:(NSString*)message;
+- (void) onRequestComplete:(NSData*)response;
 
 @end
 
@@ -36,6 +36,7 @@
 + (void) setLastRegion:(NSString*)region;
 
 + (void) uploadPhotos:(id <UploadControllerDelegate>)delegate;
++ (NSString*) parseServerResponse:(NSData*)response;
 
 @property (nonatomic, strong) NSArray* regions;
 @property (nonatomic, strong) NSArray* photos;
