@@ -24,7 +24,7 @@ These resource maps can be used to quickly identify critical components to any d
 2. *This step depends on what you're using:*
   - **Using an app (iOS / Android)**:  The app has screens that let you enter information about the pictures.  Once you have a data connection you can hit the "Upload" button to send the info to our server.
   - **Using a browser**: There's a website (in progress) for uploading photos directly to the server and entering the info from there.
-3. All the collected data can now be viewed / searched / filtered through [this web app](http://codeforsanfrancisco.org/Mobile-Fusion-Tables/RezzoTanzania.html) (made with [Mobile Fusion Tables](http://codeforsanfrancisco.org/Mobile-Fusion-Tables)).
+3. All the collected data can now be viewed / searched / filtered through [this web app](http://codeforsanfrancisco.org/Mobile-Fusion-Tables/RezzoTanzania.html) (made with [Mobile Fusion Tables](https://github.com/sfbrigade/Mobile-Fusion-Tables)).
 
 
 <h3>Current Status</h3>
