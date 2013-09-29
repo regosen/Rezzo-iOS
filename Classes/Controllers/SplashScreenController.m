@@ -31,7 +31,7 @@
     CGSize screenSize = self.view.bounds.size;
     NSString* fileName = @"first-launch-screen";
     
-    if (screenSize.height == 460) // old screen size
+    if (screenSize.height <= 480) // 3.5-inch screen
     {
         fileName = [NSString stringWithFormat:@"%@-960", fileName];
     }
@@ -42,7 +42,15 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"png"];
     self.imageView.image = [UIImage imageWithContentsOfFile:path];
 
-    self.imageView.frame = CGRectMake(0, 0, screenSize.width, screenSize.height);
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
+    {
+        // HACK: (0,0) includes top status bar for iOS 7
+        self.imageView.frame = CGRectMake(0, 20, screenSize.width, screenSize.height-20);
+    }
+    else
+    {
+        self.imageView.frame = CGRectMake(0, 0, screenSize.width, screenSize.height);
+    }
     self.imageView.contentMode = UIViewContentModeScaleToFill;
     [self.view addSubview:self.imageView];
 

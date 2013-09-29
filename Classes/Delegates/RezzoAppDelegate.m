@@ -10,11 +10,34 @@
 #import "MainViewController.h"
 #import "Brain.h"
 
+#import "SSKeychain.h"
+#import <Security/Security.h>
+
 @implementation RezzoAppDelegate
+
+// from http://stackoverflow.com/questions/12570799/uinavigationcontroller-popviewcontrolleranimated-crash-in-ios-6
+- (NSString *)getUUID
+{
+    // getting the unique key (if present ) from keychain , assuming "your app identifier" as a key
+    NSString *uuid = [SSKeychain passwordForService:@"Doblet" account:@"user"];
+    if (uuid == nil)
+    {
+        // if this is the first time app lunching, create key for device
+        CFUUIDRef theUUID = CFUUIDCreate(NULL);
+        CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+        CFRelease(theUUID);
+        uuid = (__bridge NSString *)string;
+        
+        // save newly created key to Keychain
+        [SSKeychain setPassword:uuid forService:@"Doblet" account:@"user"];
+        // this is the one time process
+    }
+    return uuid;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    [TestFlight setDeviceIdentifier:[self getUUID]];
     [TestFlight takeOff:@"ccd159bd-fc2f-44df-94c4-351b16798217"];
     // Override point for customization after application launch.
     [Brain get];

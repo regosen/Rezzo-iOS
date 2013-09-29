@@ -28,6 +28,8 @@
 		E48F943D17694CEB003C6443 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E48F943C17694CEB003C6443 /* Default-Portrait@2x~ipad.png */; };
 		E48F943F17694D7D003C6443 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E48F943E17694D7D003C6443 /* Default-568h@2x.png */; };
 		E48F944117694EC3003C6443 /* first-launch-screen-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = E48F944017694EC3003C6443 /* first-launch-screen-ipad.png */; };
+		E4A41AD817F895AD001C771D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A41AD717F895AD001C771D /* Security.framework */; };
+		E4A41ADB17F895D3001C771D /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A41ADA17F895D3001C771D /* SSKeychain.m */; };
 		E4A74CFE1767D5EC009F5DB1 /* first-launch-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */; };
 		E4A74D011767D8DE009F5DB1 /* SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */; };
 		E4A74D0317680721009F5DB1 /* first-launch-screen-960.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A74D0217680721009F5DB1 /* first-launch-screen-960.png */; };
@@ -74,6 +76,9 @@
 		E48F943C17694CEB003C6443 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "Resources/Images/Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
 		E48F943E17694D7D003C6443 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Images/Default-568h@2x.png"; sourceTree = "<group>"; };
 		E48F944017694EC3003C6443 /* first-launch-screen-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first-launch-screen-ipad.png"; path = "Resources/Images/first-launch-screen-ipad.png"; sourceTree = "<group>"; };
+		E4A41AD717F895AD001C771D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E4A41AD917F895D3001C771D /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = Classes/Delegates/SSKeychain.h; sourceTree = SOURCE_ROOT; };
+		E4A41ADA17F895D3001C771D /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = Classes/Delegates/SSKeychain.m; sourceTree = SOURCE_ROOT; };
 		E4A74CFD1767D5EC009F5DB1 /* first-launch-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first-launch-screen.png"; path = "Resources/Images/first-launch-screen.png"; sourceTree = "<group>"; };
 		E4A74CFF1767D8DE009F5DB1 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScreenController.h; path = Classes/Controllers/SplashScreenController.h; sourceTree = SOURCE_ROOT; };
 		E4A74D001767D8DE009F5DB1 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashScreenController.m; path = Classes/Controllers/SplashScreenController.m; sourceTree = SOURCE_ROOT; };
@@ -105,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A41AD817F895AD001C771D /* Security.framework in Frameworks */,
 				E4EDEB2C176EB15700A236A0 /* libz.dylib in Frameworks */,
 				E41EA901175ACBFB00485FBA /* AssetsLibrary.framework in Frameworks */,
 				E41EA8FF175ACB9800485FBA /* ImageIO.framework in Frameworks */,
@@ -124,6 +130,8 @@
 		E4383F5D179F3F5500E3D924 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				E4A41AD917F895D3001C771D /* SSKeychain.h */,
+				E4A41ADA17F895D3001C771D /* SSKeychain.m */,
 				E4D1D02217597BE2007D9F93 /* RezzoAppDelegate.h */,
 				E4D1D02317597BE2007D9F93 /* RezzoAppDelegate.m */,
 				E4D1D02617597BE2007D9F93 /* main.m */,
@@ -246,6 +254,7 @@
 		E4F0FEA91745859100CD3650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4A41AD717F895AD001C771D /* Security.framework */,
 				E41EA900175ACBFB00485FBA /* AssetsLibrary.framework */,
 				E41EA8FE175ACB9800485FBA /* ImageIO.framework */,
 				E41EA8EF175AC43200485FBA /* MobileCoreServices.framework */,
@@ -358,6 +367,7 @@
 				E4D1D03A17597BE2007D9F93 /* RezzoAppDelegate.m in Sources */,
 				E4D1D03C17597BE2007D9F93 /* main.m in Sources */,
 				E4D1D03D17597BE2007D9F93 /* PhotoViewController.m in Sources */,
+				E4A41ADB17F895D3001C771D /* SSKeychain.m in Sources */,
 				E41EA8EA175ABAB300485FBA /* PhotoInfo.m in Sources */,
 				E41EA904175AD4DD00485FBA /* DescriptionViewController.m in Sources */,
 				E41EA907175AD72C00485FBA /* CategoriesViewController.m in Sources */,
@@ -410,7 +420,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Regaip Sen (E3V3UGV4S4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Regaip Sen (E3V3UGV4S4)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -423,8 +434,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "0D185948-0BB4-4861-9226-4C0E0A2350D4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,14 +454,16 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Regaip Sen (E3V3UGV4S4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Regaip Sen (E3V3UGV4S4)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "0D185948-0BB4-4861-9226-4C0E0A2350D4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -459,8 +473,8 @@
 		E4F0FED91745859100CD3650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Regaip Sen (E3V3UGV4S4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Regaip Sen (E3V3UGV4S4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -476,8 +490,8 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = Rezzo;
-				PROVISIONING_PROFILE = "A187A298-5ABA-4F4E-A399-C6826BF80921";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A187A298-5ABA-4F4E-A399-C6826BF80921";
+				PROVISIONING_PROFILE = "0D185948-0BB4-4861-9226-4C0E0A2350D4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D185948-0BB4-4861-9226-4C0E0A2350D4";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -486,8 +500,8 @@
 		E4F0FEDA1745859100CD3650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Regaip Sen (GSPA67DXX4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Regaip Sen (E3V3UGV4S4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Regaip Sen (E3V3UGV4S4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -502,8 +516,8 @@
 					"\"$(SRCROOT)/TestFlight\"",
 				);
 				PRODUCT_NAME = Rezzo;
-				PROVISIONING_PROFILE = "A187A298-5ABA-4F4E-A399-C6826BF80921";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A187A298-5ABA-4F4E-A399-C6826BF80921";
+				PROVISIONING_PROFILE = "0D185948-0BB4-4861-9226-4C0E0A2350D4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D185948-0BB4-4861-9226-4C0E0A2350D4";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
