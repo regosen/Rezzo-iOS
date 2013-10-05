@@ -161,7 +161,7 @@
     else
     {
         // fail
-        NSLog(errorMessage);
+        NSLog(@"%@", errorMessage);
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Can't upload due to the following errors:" message:@"\n\n\n\n\n\n\n\n\n\n" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         UIWebView* webView = [[UIWebView alloc] init];

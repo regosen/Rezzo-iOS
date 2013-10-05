@@ -47,6 +47,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.translucent = NO;
     [self updateView];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 }
