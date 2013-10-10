@@ -89,7 +89,6 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -163,13 +162,7 @@
         // fail
         NSLog(@"%@", errorMessage);
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Can't upload due to the following errors:" message:@"\n\n\n\n\n\n\n\n\n\n" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        UIWebView* webView = [[UIWebView alloc] init];
-        [webView setFrame:CGRectMake(12,75,260,200)];
-        [webView loadHTMLString:errorMessage baseURL:nil];
-        
-        [alertView addSubview:webView];
-        [alertView show];
+        [Brain alertWebView:self.view message:errorMessage title:@"Couldn't post stats due to the following error:"];
     }
     
     [self.spinner stopAnimating];
@@ -217,15 +210,32 @@
 }
 
 - (void)addImageFromCamera:(UIBarButtonItem *)sender {
+#if TARGET_IPHONE_SIMULATOR
+    // no camera in simulator, use dummy photo data
+    PhotoInfo* newPhoto = [[PhotoInfo alloc] init];
+    newPhoto.location = self.locationManager.location.coordinate;
+    [Brain addAndSelectPhoto:newPhoto];
+    [self performSegueWithIdentifier:@"Detail" sender:self];
+#else
     [TestFlight passCheckpoint:@"Using camera"];
     [self.locationManager startUpdatingLocation];
     [self addImageFromSource:UIImagePickerControllerSourceTypeCamera];
     [self.locationManager stopUpdatingLocation];
+#endif
 }
 
 - (void)addImageFromLibrary:(UIBarButtonItem *)sender {
+#if TARGET_IPHONE_SIMULATOR
+    // no library in simulator, use dummy photo data
+    PhotoInfo* newPhoto = [[PhotoInfo alloc] init];
+    newPhoto.location = self.locationManager.location.coordinate;
+    [Brain addAndSelectPhoto:newPhoto];
+    [self performSegueWithIdentifier:@"Detail" sender:self];
+#else
     [TestFlight passCheckpoint:@"Using photo library"];
     [self addImageFromSource:UIImagePickerControllerSourceTypePhotoLibrary];
+#endif
+
 }
 
 - (void)dismissImagePicker

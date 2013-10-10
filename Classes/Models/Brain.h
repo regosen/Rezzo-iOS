@@ -37,6 +37,7 @@
 
 + (void) uploadPhotos:(id <UploadControllerDelegate>)delegate;
 + (NSString*) parseServerResponse:(NSData*)response;
++ (void) alertWebView:(UIView*)view message:(NSString*)message title:(NSString*)title;
 
 @property (nonatomic, strong) NSArray* regions;
 @property (nonatomic, strong) NSArray* photos;

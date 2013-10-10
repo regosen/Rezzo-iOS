@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/Models/Brain.m"
-            timestampString = "402681428.992562"
+            timestampString = "403135621.634488"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "+parseServerResponse:"
             landmarkType = "5">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Classes/Models/Brain.m"
-            timestampString = "402684925.883908"
+            timestampString = "403136137.381626"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
             landmarkName = "+uploadPhotos:"
             landmarkType = "5">
          </BreakpointContent>

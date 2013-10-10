@@ -9,6 +9,8 @@
 #import "Brain.h"
 #import "PhotoInfo.h"
 
+#import "CustomIOS7AlertView.h"
+
 @interface Brain() <NSURLConnectionDelegate>
 
 @property (nonatomic, weak) id<UploadControllerDelegate> delegate;
@@ -27,6 +29,34 @@ static Brain *sInstance;
 #define RESOURCES_KEY  @"resources"
 #define LAST_REGION_KEY  @"last_region"
 #define REGIONS_KEY  @"regions"
+
+
++ (void) alertWebView:(UIView*)view message:(NSString*)message title:(NSString*)title
+{
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 7.0)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:@"\n\n\n\n\n\n\n\n\n\n" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIWebView* webView = [[UIWebView alloc] init];
+        [webView setFrame:CGRectMake(12,75,260,200)];
+        [webView loadHTMLString:message baseURL:nil];
+        
+        [alertView addSubview:webView];
+        [alertView show];
+    }
+    else
+    {
+        NSString* messageWithTitle = [[NSMutableString alloc] initWithFormat:@"<p><b>%@</b></p>%@", title, message];
+        
+        CustomIOS7AlertView *alertView = [[CustomIOS7AlertView alloc] initWithParentView:view];
+        
+        UIWebView* webView = [[UIWebView alloc] init];
+        [webView setFrame:CGRectMake(0,0,260,200)];
+        [webView loadHTMLString:messageWithTitle baseURL:nil];
+        [alertView setContainerView:webView];
+        [alertView show];
+    }
+}
+
 
 + (void)initialize
 {
